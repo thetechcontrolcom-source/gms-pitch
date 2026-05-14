@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GMS — Grant Management System | Citrin Cooperman</title>
+<meta name="description" content="The grant engagement, in one system. GMS is an enterprise-grade platform for nonprofit grant work — built in-house, in production, and ready to scale across the firm and beyond grants.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Open Graph / Facebook / LinkedIn / Slack / iMessage -->
+<!-- NOTE: When hosting on a different domain, replace https://khushbushah.online/gms-panel-pitch/ in these URLs -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Citrin Cooperman">
+<meta property="og:url" content="https://khushbushah.online/gms-panel-pitch/GMS-Panel-Pitch.html">
+<meta property="og:title" content="GMS — Grant Management System">
+<meta property="og:description" content="The grant engagement, in one system. Enterprise-grade nonprofit grant platform — built in-house, in production, ready to scale.">
+<meta property="og:image" content="https://khushbushah.online/gms-panel-pitch/og-image.png">
+<meta property="og:image:secure_url" content="https://khushbushah.online/gms-panel-pitch/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GMS — The grant engagement, in one system. Citrin Cooperman panel pitch.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GMS — Grant Management System">
+<meta name="twitter:description" content="The grant engagement, in one system. Enterprise-grade nonprofit grant platform — built in-house, in production, ready to scale.">
+<meta name="twitter:image" content="https://khushbushah.online/gms-panel-pitch/og-image.png">
+
+<meta name="theme-color" content="#6a52b8">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f3ee;
+  --surface:#ffffff;
+  --surface-alt:#ede9e0;
+  --lilac:#cabff0;
+  --lilac-bold:#6a52b8;
+  --mint:#a9dcc4;
+  --mint-bold:#2f7d5f;
+  --peach:#f7c2a8;
+  --peach-bold:#b86440;
+  --sky:#a8cfee;
+  --sky-bold:#3a76b0;
+  --blush:#f4b6c3;
+  --blush-bold:#a8456a;
+  --butter:#f1d57e;
+  --butter-bold:#9a7616;
+  --ink:#1a1a30;
+  --ink-2:#363651;
+  --ink-3:#5e5e76;
+  --muted:#8d8d9e;
+  --border:#e0ddd2;
+  --border-strong:#c9c6bb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px}
+
+.deck{position:fixed;inset:0;display:flex;width:1000vw;transition:transform .8s cubic-bezier(.7,.05,.2,1)}
+.slide{width:100vw;height:100vh;flex-shrink:0;padding:70px 7vw 90px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.slide-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+
+.slide-1 .slide-bg{background:radial-gradient(circle at 85% 15%,rgba(106,82,184,0.14),transparent 50%),radial-gradient(circle at 15% 85%,rgba(58,118,176,0.10),transparent 55%)}
+.slide-2 .slide-bg{background:radial-gradient(circle at 90% 10%,rgba(47,125,95,0.10),transparent 55%)}
+.slide-3 .slide-bg{background:radial-gradient(circle at 10% 10%,rgba(168,69,106,0.10),transparent 55%)}
+.slide-4 .slide-bg{background:radial-gradient(circle at 90% 90%,rgba(184,100,64,0.10),transparent 55%)}
+.slide-5 .slide-bg{background:radial-gradient(circle at 10% 90%,rgba(58,118,176,0.10),transparent 55%)}
+.slide-6 .slide-bg{background:radial-gradient(circle at 90% 10%,rgba(106,82,184,0.10),transparent 55%)}
+.slide-7 .slide-bg{background:radial-gradient(circle at 10% 90%,rgba(47,125,95,0.10),transparent 55%)}
+.slide-8 .slide-bg{background:radial-gradient(circle at 90% 50%,rgba(154,118,22,0.10),transparent 55%)}
+.slide-9 .slide-bg{background:radial-gradient(circle at 50% 100%,rgba(106,82,184,0.12),transparent 55%)}
+.slide-10 .slide-bg{background:radial-gradient(circle at 50% 100%,rgba(47,125,95,0.14),transparent 55%),radial-gradient(circle at 100% 0%,rgba(154,118,22,0.10),transparent 55%)}
+.slide-closing .slide-bg{background:radial-gradient(circle at 50% 50%,rgba(106,82,184,0.16),transparent 65%)}
+
+.slide-inner{position:relative;z-index:1;width:100%;max-width:1500px;margin:0 auto}
+
+.slide-num{position:absolute;top:36px;right:7vw;z-index:5;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:2px}
+.slide-foot{position:absolute;bottom:28px;left:7vw;right:7vw;z-index:5;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:1.5px}
+.brand-mini{display:flex;align-items:center;gap:8px;color:var(--ink-3)}
+.brand-mini .logo{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--lilac-bold),var(--sky-bold));display:flex;align-items:center;justify-content:center;color:#fff}
+.brand-mini .logo i{font-size:11px}
+
+.kicker{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--lilac);color:var(--lilac-bold);margin-bottom:18px;width:fit-content}
+.kicker.mint{background:var(--mint);color:var(--mint-bold)}
+.kicker.peach{background:var(--peach);color:var(--peach-bold)}
+.kicker.sky{background:var(--sky);color:var(--sky-bold)}
+.kicker.blush{background:var(--blush);color:var(--blush-bold)}
+.kicker.butter{background:var(--butter);color:var(--butter-bold)}
+
+h1,h2,h3{font-family:'Inter',sans-serif;letter-spacing:-0.02em;color:var(--ink);font-weight:700;line-height:1.2}
+h1{font-size:3.2rem;font-weight:800;line-height:1.1}
+h2{font-size:2.1rem;margin-bottom:14px}
+h3{font-size:1.08rem;margin-bottom:4px;font-weight:600}
+p{color:var(--ink-3);font-size:1rem;line-height:1.6;max-width:740px}
+p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
+.serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:0}
+.accent-text{background:linear-gradient(120deg,var(--lilac-bold),var(--sky-bold),var(--mint-bold));background-size:200% 200%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shift 6s ease-in-out infinite}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+.step{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+.step.shown{opacity:1;transform:none}
+.step.left{transform:translateX(-26px)}.step.left.shown{transform:none}
+.step.right{transform:translateX(26px)}.step.right.shown{transform:none}
+.step.zoom{transform:scale(.94)}.step.zoom.shown{transform:none}
+
+.cascade > *{opacity:0;transform:translateY(14px);transition:opacity .5s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.7,.2,1)}
+.shown.cascade > *,.cascade.shown > *{opacity:1;transform:none}
+.cascade.shown > *:nth-child(1){transition-delay:.05s}
+.cascade.shown > *:nth-child(2){transition-delay:.13s}
+.cascade.shown > *:nth-child(3){transition-delay:.21s}
+.cascade.shown > *:nth-child(4){transition-delay:.29s}
+.cascade.shown > *:nth-child(5){transition-delay:.37s}
+.cascade.shown > *:nth-child(6){transition-delay:.45s}
+.cascade.shown > *:nth-child(7){transition-delay:.53s}
+
+/* SLIDE 1 */
+.s1-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
+.s1-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-3);letter-spacing:2.5px;text-transform:uppercase;font-weight:500}
+.s1-eyebrow .line{width:40px;height:1px;background:var(--ink-3)}
+.s1-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--lilac-bold)}
+.s1-headline{font-family:'Inter',sans-serif;font-weight:800;letter-spacing:-0.035em;font-size:4.4rem;line-height:1.05;color:var(--ink)}
+.s1-headline .serif{font-size:4.7rem;letter-spacing:-0.02em}
+.s1-sub{font-size:1.02rem;color:var(--ink-3);margin-top:24px;max-width:520px;line-height:1.6}
+.s1-meta{margin-top:36px;padding-top:22px;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:520px}
+.s1-meta-item .ml{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.s1-meta-item .mv{font-size:1.1rem;color:var(--ink);font-weight:700;margin-top:4px;letter-spacing:-0.01em}
+.s1-art{position:relative;width:100%;max-width:820px;justify-self:center;display:flex;align-items:center;justify-content:center}
+.s1-circle-1{position:absolute;width:92%;height:92%;border-radius:50%;background:conic-gradient(from 230deg,var(--lilac),var(--sky),var(--mint),var(--peach),var(--lilac));filter:blur(28px);opacity:0.55;animation:rot-slow 30s linear infinite;z-index:0}
+.s1-login{position:relative;z-index:2;width:100%;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--surface);border:1px solid var(--border);box-shadow:0 30px 60px rgba(31,31,58,0.15),0 8px 20px rgba(31,31,58,0.08)}
+.s1-login::before{content:'';position:absolute;top:0;left:0;right:0;height:24px;background:linear-gradient(to bottom,#f4f1eb,#ede9e0);border-bottom:1px solid var(--border);z-index:2}
+.s1-login::after{content:'';position:absolute;top:8px;left:12px;width:8px;height:8px;border-radius:50%;background:#ff8a85;box-shadow:13px 0 0 #fec76a,26px 0 0 #6dd99c;z-index:3}
+.s1-login img{position:absolute;top:24px;left:0;right:0;bottom:0;width:100%;height:calc(100% - 24px);object-fit:cover;object-position:top center;display:block}
+.s1-floater{position:absolute;padding:10px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);box-shadow:0 10px 24px rgba(31,31,58,0.10);display:flex;align-items:center;gap:9px;font-size:11px;font-weight:500;color:var(--ink-2);z-index:3;animation:float-soft 6s ease-in-out infinite}
+.s1-floater .fi{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px}
+.s1-floater.f1{top:-14px;left:-18px}.s1-floater.f1 .fi{background:var(--lilac);color:var(--lilac-bold)}
+.s1-floater.f2{top:22%;right:-32px;animation-delay:-2s}.s1-floater.f2 .fi{background:var(--mint);color:var(--mint-bold)}
+.s1-floater.f3{bottom:18%;left:-30px;animation-delay:-4s}.s1-floater.f3 .fi{background:var(--peach);color:var(--peach-bold)}
+.s1-floater.f4{bottom:-14px;right:-14px;animation-delay:-1s}.s1-floater.f4 .fi{background:var(--sky);color:var(--sky-bold)}
+@keyframes float-soft{50%{transform:translateY(-7px)}}
+@keyframes rot-slow{to{transform:rotate(360deg)}}
+
+/* SLIDE 2 */
+.s2-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:center;margin-top:6px}
+.s2-portrait{position:relative;width:100%;max-width:320px;justify-self:start}
+.s2-portrait .frame{width:100%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;position:relative;z-index:1;box-shadow:0 20px 50px rgba(31,31,58,0.15),0 6px 18px rgba(31,31,58,0.08);border:1px solid var(--border)}
+.s2-portrait .frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.s2-portrait .deco-circle{position:absolute;width:60%;height:60%;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--butter));top:-10%;right:-12%;z-index:0;opacity:0.7}
+.s2-portrait .quote-card{position:absolute;bottom:-18px;right:-30px;z-index:2;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:0 14px 30px rgba(31,31,58,0.12);max-width:200px;display:flex;align-items:center;gap:10px}
+.s2-portrait .quote-card .qi{width:30px;height:30px;border-radius:8px;background:var(--mint);color:var(--mint-bold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.s2-portrait .quote-card .qt{font-size:11px;color:var(--ink-2);font-weight:500;line-height:1.4}
+.s2-info .name-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+.s2-info h3.name{font-size:1.6rem;font-weight:800;letter-spacing:-0.02em}
+.s2-info .role{font-size:0.88rem;color:var(--ink-3)}
+.s2-info .cred-row{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 22px}
+.s2-info .cred{padding:4px 10px;border-radius:6px;background:var(--lilac);color:var(--lilac-bold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600}
+.s2-info .cred:nth-child(2){background:var(--mint);color:var(--mint-bold)}
+.s2-info .cred:nth-child(3){background:var(--peach);color:var(--peach-bold)}
+.s2-info .bio{display:flex;flex-direction:column;gap:10px}
+.s2-info .bio li{list-style:none;display:flex;gap:11px;align-items:flex-start}
+.s2-info .bio li i{color:var(--mint-bold);margin-top:5px;font-size:8px}
+.s2-info .bio li span{color:var(--ink-2);font-size:0.9rem;line-height:1.55}
+
+/* SLIDE 3 */
+.s3-top{display:grid;grid-template-columns:auto 1fr;gap:60px;align-items:center;margin-bottom:30px}
+.s3-bignum{font-family:'Instrument Serif',serif;font-style:italic;font-size:9rem;line-height:0.9;color:var(--ink);background:linear-gradient(135deg,var(--blush-bold),var(--peach-bold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.s3-bignum-cap{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:2px;margin-top:4px;text-transform:uppercase}
+.flow-wrap{margin-top:6px;padding:22px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border)}
+.flow{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;position:relative}
+.flow-node{padding:12px 8px;border-radius:10px;background:var(--bg);border:1px solid var(--border);text-align:center;position:relative;transition:all .3s}
+.flow-node:hover{transform:translateY(-3px);background:var(--surface);box-shadow:0 6px 14px rgba(31,31,58,0.06)}
+.flow-node .fn-icon{width:32px;height:32px;border-radius:8px;background:var(--lilac);color:var(--lilac-bold);display:flex;align-items:center;justify-content:center;font-size:13px;margin:0 auto 7px}
+.flow-node:nth-child(2) .fn-icon{background:var(--mint);color:var(--mint-bold)}
+.flow-node:nth-child(3) .fn-icon{background:var(--peach);color:var(--peach-bold)}
+.flow-node:nth-child(4) .fn-icon{background:var(--sky);color:var(--sky-bold)}
+.flow-node:nth-child(5) .fn-icon{background:var(--blush);color:var(--blush-bold)}
+.flow-node:nth-child(6) .fn-icon{background:var(--butter);color:var(--butter-bold)}
+.flow-node:nth-child(7) .fn-icon{background:var(--lilac);color:var(--lilac-bold)}
+.flow-node .fn-label{font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.flow-node .fn-tool{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted)}
+.flow-node .fn-num{position:absolute;top:-7px;left:-7px;width:18px;height:18px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700}
+.flow-arrow{position:absolute;top:50%;right:-9px;transform:translateY(-50%);color:var(--muted);font-size:10px;z-index:2;background:var(--surface);padding:0 2px;animation:af 1.6s ease-in-out infinite}
+.flow-node:nth-child(7n) .flow-arrow{display:none}
+@keyframes af{50%{transform:translateY(-50%) translateX(3px);opacity:.5}}
+.pain-grid{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pain-card{padding:12px;border-radius:10px;background:var(--blush);border:1px solid rgba(168,69,106,0.25)}
+.pain-card i{color:var(--blush-bold);font-size:13px;margin-bottom:5px;display:block}
+.pain-card .pl{font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.pain-card .ps{font-size:10px;color:var(--ink-3);font-family:'JetBrains Mono',monospace}
+
+/* SLIDE 4 — Kyle's time budget */
+.s4-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;margin-top:10px}
+.s4-bars{padding:24px;border-radius:16px;background:var(--surface);border:1px solid var(--border)}
+.s4-bars-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.s4-bars-title{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink);font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.s4-bars-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px}
+.s4-bars-list{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+.s4-bar-row{display:grid;grid-template-columns:130px 1fr 50px;gap:14px;align-items:center}
+.s4-bar-label{font-size:0.86rem;color:var(--ink-2);font-weight:500}
+.s4-bar-label .sub{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.5px;margin-top:2px}
+.s4-bar-track{height:14px;border-radius:99px;background:var(--surface-alt);overflow:hidden;position:relative}
+.s4-bar-fill{height:100%;border-radius:99px;width:var(--w);transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .2s}
+.cascade.shown .s4-bar-fill{transform:scaleX(1)}
+.s4-bars.shown .s4-bar-fill{transform:scaleX(1)}
+.s4-bar-val{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--ink);text-align:right}
+
+.s4-bar-row.r1 .s4-bar-fill{background:linear-gradient(90deg,var(--peach-bold),var(--blush-bold))}
+.s4-bar-row.r2 .s4-bar-fill{background:linear-gradient(90deg,var(--lilac-bold),var(--sky-bold))}
+.s4-bar-row.r3 .s4-bar-fill{background:linear-gradient(90deg,var(--mint-bold),var(--sky-bold))}
+.s4-bar-row.r4 .s4-bar-fill{background:linear-gradient(90deg,var(--butter-bold),var(--peach-bold))}
+.s4-bar-row.r5 .s4-bar-fill{background:linear-gradient(90deg,var(--sky-bold),var(--lilac-bold))}
+
+.s4-bars-foot{margin-top:18px;padding-top:14px;border-top:1px dashed var(--border-strong);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-3);letter-spacing:0.5px;line-height:1.6}
+.s4-bars-foot strong{color:var(--peach-bold);font-weight:600}
+
+.s4-callout{display:flex;flex-direction:column;gap:14px}
+.s4-headline-card{padding:28px 26px;border-radius:16px;background:linear-gradient(135deg,var(--peach),var(--blush));border:1px solid rgba(184,100,64,0.3);position:relative;overflow:hidden}
+.s4-headline-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,0.4);filter:blur(40px)}
+.s4-headline-card .hc-pre{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--peach-bold);letter-spacing:2px;text-transform:uppercase;font-weight:600;position:relative}
+.s4-headline-card .hc-num{font-size:4.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-top:10px;position:relative}
+.s4-headline-card .hc-num .u{font-size:2.2rem;color:var(--peach-bold);font-weight:700}
+.s4-headline-card .hc-line{font-size:1rem;font-weight:700;color:var(--ink);margin-top:10px;line-height:1.35;position:relative}
+.s4-headline-card .hc-sub{font-size:0.82rem;color:var(--ink-2);margin-top:6px;position:relative;line-height:1.55}
+
+.s4-quote{padding:18px 22px;border-radius:14px;background:var(--surface);border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start}
+.s4-quote i{color:var(--lilac-bold);font-size:18px;margin-top:2px}
+.s4-quote .q{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.05rem;color:var(--ink);line-height:1.4}
+.s4-quote .q-att{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:6px;text-transform:uppercase}
+
+/* SLIDE 5 — restored 3-column blueprint + 3 layer cards */
+.blueprint{margin-top:16px;padding:20px;border-radius:14px;background:var(--surface);border:1px solid var(--border)}
+.bp-grid{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:16px;align-items:stretch;position:relative}
+.bp-input,.bp-output,.bp-engine{padding:16px;border-radius:10px;display:flex;flex-direction:column;gap:6px}
+.bp-input{background:var(--peach);border:1px solid rgba(184,100,64,0.30)}
+.bp-output{background:var(--mint);border:1px solid rgba(47,125,95,0.30)}
+.bp-engine{background:linear-gradient(135deg,var(--lilac),var(--sky));border:1px solid rgba(106,82,184,0.40);align-items:center;justify-content:center;text-align:center}
+.bp-input h4,.bp-output h4{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;font-weight:600}
+.bp-input h4{color:var(--peach-bold)}
+.bp-output h4{color:var(--mint-bold)}
+.bp-item,.bp-out-item{padding:7px 11px;border-radius:7px;background:rgba(255,255,255,0.7);display:flex;align-items:center;gap:8px;font-size:11px;color:var(--ink-2)}
+.bp-item i{color:var(--peach-bold);font-size:11px}
+.bp-out-item i{color:var(--mint-bold);font-size:11px}
+.bp-engine .engine-core{width:54px;height:54px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;margin-bottom:6px;box-shadow:0 8px 20px rgba(106,82,184,0.35);animation:pulse-soft 3s ease-in-out infinite}
+@keyframes pulse-soft{50%{transform:scale(1.08);box-shadow:0 12px 28px rgba(106,82,184,0.5)}}
+.bp-engine .engine-core i{font-size:20px;color:var(--lilac-bold)}
+.bp-engine .e-title{font-size:0.95rem;font-weight:700;color:var(--ink)}
+.bp-engine .e-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink-2);letter-spacing:1px;margin-top:2px}
+.bp-engine .e-layers{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.bp-engine .e-layer{padding:3px 7px;border-radius:5px;background:rgba(255,255,255,0.75);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink-2);font-weight:500}
+.bp-flow-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:13px;color:var(--ink-3);z-index:5}
+.bp-flow-arrow.left{left:calc(33.33% - 8px)}
+.bp-flow-arrow.right{right:calc(33.33% - 8px)}
+
+.layers-row{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.layer-card{padding:16px;border-radius:12px;background:var(--surface);border:1px solid var(--border)}
+.layer-card .l-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:10px}
+.layer-card:nth-child(1) .l-icon{background:var(--lilac);color:var(--lilac-bold)}
+.layer-card:nth-child(2) .l-icon{background:var(--sky);color:var(--sky-bold)}
+.layer-card:nth-child(3) .l-icon{background:var(--mint);color:var(--mint-bold)}
+.layer-card h3{font-size:0.92rem}
+.layer-card .l-tag{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:5px;letter-spacing:1px}
+.layer-card p{font-size:0.8rem;margin-top:3px}
+.layer-card .l-chips{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+.l-chip{padding:2px 7px;border-radius:5px;background:var(--surface-alt);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink-3)}
+
+/* SLIDE 6 / 7 — demo with side bullets */
+.s67-stage{display:grid;grid-template-columns:1.55fr 1fr;gap:24px;margin-top:16px;align-items:center}
+.demo-screen{aspect-ratio:16/9;background:#000;border:1px solid var(--border);border-radius:14px;position:relative;overflow:hidden;box-shadow:0 18px 36px rgba(31,31,58,0.15)}
+.demo-screen::before{content:'';position:absolute;top:0;left:0;right:0;height:28px;background:var(--surface);border-bottom:1px solid var(--border);z-index:3}
+.demo-screen::after{content:'';position:absolute;top:11px;left:14px;width:7px;height:7px;border-radius:50%;background:#ff8a85;box-shadow:12px 0 0 #fec76a,24px 0 0 #6dd99c;z-index:4}
+.demo-screen video{position:absolute;top:28px;left:0;right:0;bottom:0;width:100%;height:calc(100% - 28px);object-fit:contain;background:#000;display:block;z-index:1}
+.play-orb{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--lilac-bold),var(--sky-bold));display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(106,82,184,0.40);position:relative;cursor:pointer;animation:play-pulse 2.5s ease-in-out infinite}
+.play-orb::before,.play-orb::after{content:'';position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--lilac-bold);animation:ripple 2s ease-out infinite}
+.play-orb::after{animation-delay:1s}
+@keyframes ripple{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+@keyframes play-pulse{50%{box-shadow:0 14px 36px rgba(106,82,184,0.55)}}
+.play-orb i{font-size:26px;color:#fff;margin-left:4px}
+.demo-screen .dlabel{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1.5px;color:var(--ink-2)}
+.demo-screen .dspec{font-size:10px;color:var(--muted)}
+
+.demo-bullets{display:flex;flex-direction:column;gap:10px}
+.db-h{padding:14px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;gap:10px;align-items:flex-start;position:relative}
+.db-h::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:10px 0 0 10px}
+.db-h:nth-child(1)::before{background:var(--lilac-bold)}
+.db-h:nth-child(2)::before{background:var(--mint-bold)}
+.db-h:nth-child(3)::before{background:var(--peach-bold)}
+.db-h .di{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:1px}
+.db-h:nth-child(1) .di{background:var(--lilac);color:var(--lilac-bold)}
+.db-h:nth-child(2) .di{background:var(--mint);color:var(--mint-bold)}
+.db-h:nth-child(3) .di{background:var(--peach);color:var(--peach-bold)}
+.db-h .dbt{font-weight:600;color:var(--ink);font-size:0.86rem;margin-bottom:2px}
+.db-h .dbs{font-size:0.77rem;color:var(--ink-3);line-height:1.5}
+
+/* SLIDE 8 — restored side-by-side, fixed sizing */
+.s8-twoup{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.shotbox{aspect-ratio:16/9;border-radius:12px;background:var(--surface);border:1px solid var(--border);position:relative;overflow:hidden;box-shadow:0 12px 28px rgba(31,31,58,0.10);cursor:zoom-in;transition:transform .25s ease,box-shadow .25s ease}
+.shotbox:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(31,31,58,0.15)}
+.shotbox img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;background:var(--surface)}
+.shotbox .zoom-hint{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.9);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink-2);opacity:0;transition:opacity .2s;z-index:2}
+.shotbox:hover .zoom-hint{opacity:1}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:500;background:rgba(15,15,30,0.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:96vw;max-height:92vh;border-radius:10px;box-shadow:0 40px 80px rgba(0,0,0,0.5);transform:scale(.94);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.lightbox.open img{transform:scale(1)}
+.lightbox-close{position:absolute;top:24px;right:30px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .25s;backdrop-filter:blur(8px)}
+.lightbox-close:hover{background:rgba(255,255,255,0.2);transform:scale(1.05)}
+.lightbox-caption{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.7);letter-spacing:1.5px;text-transform:uppercase}
+.shotbox .caption{position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,0.94);backdrop-filter:blur(6px);padding:8px 12px;display:flex;align-items:center;gap:8px;border-top:1px solid var(--border)}
+.shotbox .caption i{font-size:13px;color:var(--sky-bold)}
+.shotbox:nth-child(2) .caption i{color:var(--peach-bold)}
+.shotbox .caption .sbt{font-weight:600;color:var(--ink);font-size:0.82rem;line-height:1.2}
+.s8-trust{margin-top:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.trust{padding:16px;border-radius:10px;background:var(--surface);border:1px solid var(--border)}
+.trust .ti{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:10px}
+.trust:nth-child(1) .ti{background:var(--lilac);color:var(--lilac-bold)}
+.trust:nth-child(2) .ti{background:var(--mint);color:var(--mint-bold)}
+.trust:nth-child(3) .ti{background:var(--peach);color:var(--peach-bold)}
+.trust:nth-child(4) .ti{background:var(--sky);color:var(--sky-bold)}
+.trust .tt{font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:3px}
+.trust .ts{font-size:0.74rem;color:var(--ink-3);line-height:1.5}
+
+/* SLIDE 9 */
+.why-stack{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why{padding:22px;border-radius:14px;background:var(--surface);border:1px solid var(--border);position:relative;overflow:hidden}
+.why:nth-child(2){margin-top:30px}
+.why:nth-child(3){margin-top:60px}
+.why::before{content:'';position:absolute;top:-26px;right:-26px;width:100px;height:100px;border-radius:50%;opacity:0.45}
+.why:nth-child(1)::before{background:var(--lilac)}
+.why:nth-child(2)::before{background:var(--sky)}
+.why:nth-child(3)::before{background:var(--mint)}
+.why .wi{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:12px;position:relative;z-index:1}
+.why:nth-child(1) .wi{background:var(--lilac);color:var(--lilac-bold)}
+.why:nth-child(2) .wi{background:var(--sky);color:var(--sky-bold)}
+.why:nth-child(3) .wi{background:var(--mint);color:var(--mint-bold)}
+.why h3{font-size:0.95rem;position:relative;z-index:1}
+.why p{font-size:0.8rem;position:relative;z-index:1;margin-top:3px}
+.market-callout{margin-top:24px;padding:20px;border-radius:14px;background:linear-gradient(135deg,var(--lilac),var(--sky));border:1px solid rgba(106,82,184,0.30);display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center}
+.market-callout .mi{width:42px;height:42px;border-radius:10px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--lilac-bold)}
+.market-callout .mt{font-size:0.98rem;font-weight:700;color:var(--ink);margin-bottom:3px}
+.market-callout .ms{font-size:0.82rem;color:var(--ink-2);max-width:640px;line-height:1.5}
+.market-callout .mtag{padding:6px 12px;border-radius:7px;background:var(--ink);color:#fff;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:1px}
+
+/* SLIDE 10 — Economic benefits */
+.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin-top:16px}
+.eco-hero{padding:40px 36px;border-radius:20px;background:linear-gradient(135deg,var(--mint),var(--sky));border:1px solid rgba(47,125,95,0.3);position:relative;overflow:hidden}
+.eco-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,0.45);filter:blur(50px)}
+.eco-hero .eh-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mint-bold);letter-spacing:2px;text-transform:uppercase;font-weight:600;position:relative}
+.eco-hero .eh-equation{display:flex;align-items:baseline;gap:18px;margin-top:18px;flex-wrap:wrap;position:relative}
+.eco-hero .eh-pct{font-size:5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink)}
+.eco-hero .eh-pct .u{font-size:2.6rem;color:var(--mint-bold);font-weight:700}
+.eco-hero .eh-arrow{font-size:24px;color:var(--ink-3)}
+.eco-hero .eh-fte{font-size:5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink)}
+.eco-hero .eh-fte .u{font-size:1.6rem;color:var(--mint-bold);font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+.eco-hero .eh-headline{font-size:1.2rem;font-weight:700;color:var(--ink);margin-top:18px;line-height:1.3;position:relative}
+.eco-hero .eh-sub{font-size:0.88rem;color:var(--ink-2);margin-top:8px;max-width:420px;position:relative;line-height:1.55}
+
+.eco-side{display:flex;flex-direction:column;gap:14px}
+.eco-card{padding:20px;border-radius:14px;background:var(--surface);border:1px solid var(--border);display:flex;gap:16px;align-items:flex-start}
+.eco-card .eci{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.eco-card:nth-child(1) .eci{background:var(--lilac);color:var(--lilac-bold)}
+.eco-card:nth-child(2) .eci{background:var(--peach);color:var(--peach-bold)}
+.eco-card:nth-child(3) .eci{background:var(--butter);color:var(--butter-bold)}
+.eco-card .ect{font-weight:600;color:var(--ink);font-size:0.95rem;margin-bottom:3px}
+.eco-card .ecs{font-size:0.82rem;color:var(--ink-3);line-height:1.55}
+
+.eco-foot{margin-top:20px;padding:14px 18px;border-radius:10px;background:var(--surface-alt);border:1px dashed var(--border-strong);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-3);line-height:1.6}
+.eco-foot strong{color:var(--ink);font-weight:600}
+
+/* SLIDE 11 closing */
+.slide-closing{justify-content:center;text-align:center}
+.slide-closing .slide-inner{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.slide-closing .kicker{margin-left:auto;margin-right:auto}
+.slide-closing h2{font-size:2.4rem;max-width:980px;margin:0 auto 28px;line-height:1.25}
+.slide-closing .closing-punch{margin:0 auto}
+.closing-punch{font-family:'JetBrains Mono',monospace;font-size:0.88rem;color:var(--lilac-bold);display:inline-flex;align-items:center;gap:11px;padding:11px 22px;border-radius:999px;background:var(--lilac)}
+.closing-logo{margin-top:48px;display:inline-flex;align-items:center;gap:11px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--muted)}
+.closing-logo .sq{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--lilac-bold),var(--sky-bold));display:flex;align-items:center;justify-content:center;color:#fff}
+.closing-logo .sq i{font-size:13px}
+
+.controls{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;z-index:100;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:8px 14px;box-shadow:0 8px 22px rgba(31,31,58,0.08)}
+.controls button{width:30px;height:30px;border-radius:50%;border:none;background:var(--surface-alt);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all .2s}
+.controls button:hover{background:var(--lilac);color:var(--lilac-bold)}
+.controls button:disabled{opacity:0.35;cursor:not-allowed}
+.controls .counter{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-2);font-weight:600;min-width:42px;text-align:center}
+.controls .step-counter{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;padding-left:6px;border-left:1px solid var(--border)}
+.dot-nav{position:fixed;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:100}
+.dot-nav button{width:7px;height:7px;border-radius:50%;border:none;background:var(--border-strong);cursor:pointer;transition:all .25s;padding:0}
+.dot-nav button.active{background:var(--lilac-bold);transform:scale(1.6)}
+.dot-nav button:hover{background:var(--lilac-bold)}
+.progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--lilac-bold),var(--sky-bold),var(--mint-bold));z-index:200;width:10%;transition:width .5s ease}
+.hint{position:fixed;bottom:22px;right:24px;z-index:100;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 10px}
+.hint kbd{font-family:inherit;padding:1px 5px;border-radius:4px;background:var(--surface-alt);border:1px solid var(--border);font-size:9px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1 — HERO -->
+  <div class="slide slide-1" data-num="01">
+    <div class="slide-bg"></div>
+    <span class="slide-num">01 · 10</span>
+    <div class="slide-inner">
+      <div class="s1-grid">
+        <div>
+          <div class="s1-eyebrow step"><span class="line"></span><span class="dot"></span> Citrin Cooperman · Panel Pitch · 26 May 2026</div>
+          <h1 class="s1-headline step">The grant<br>engagement,<br><span class="serif accent-text">in one system.</span></h1>
+          <p class="s1-sub step">GMS is an enterprise-grade platform for nonprofit grant work — built in-house, in production, and ready to scale across the firm and beyond grants.</p>
+        </div>
+        <div class="s1-art step zoom">
+          <div class="s1-circle-1"></div>
+          <div class="s1-login">
+            <img src="Login_page.png" alt="GMS login page">
+          </div>
+          <div class="s1-floater f1"><div class="fi"><i class="fa-solid fa-file-invoice-dollar"></i></div>Billing</div>
+          <div class="s1-floater f2"><div class="fi"><i class="fa-solid fa-table"></i></div>GL Import</div>
+          <div class="s1-floater f3"><div class="fi"><i class="fa-solid fa-shield-halved"></i></div>Audit</div>
+          <div class="s1-floater f4"><div class="fi"><i class="fa-solid fa-users"></i></div>Portal</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>CITRIN COOPERMAN</span></div>
+  </div>
+
+  <!-- SLIDE 2 — ABOUT -->
+  <div class="slide slide-2" data-num="02">
+    <div class="slide-bg"></div>
+    <span class="slide-num">02 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker mint step"><i class="fa-solid fa-user"></i> About the builder</div>
+      <h2 class="step">Built by someone who <span class="accent-text">lived the problem</span>.</h2>
+      <div class="s2-grid">
+        <div class="s2-portrait step left">
+          <div class="deco-circle"></div>
+          <div class="frame">
+            <img src="khushbuShah.jpeg" alt="Khushbu Shah">
+          </div>
+          <div class="quote-card">
+            <div class="qi"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="qt">Solving the problem I lived through, daily.</div>
+          </div>
+        </div>
+        <div class="s2-info">
+          <div class="step">
+            <div class="name-row"><h3 class="name">Khushbu Shah</h3><span class="role">Staff · Citrin Cooperman · joined 22 October</span></div>
+            <div class="cred-row"><span class="cred">CPA (licence awaited)</span><span class="cred">CFP</span><span class="cred">CWM</span></div>
+          </div>
+          <ul class="bio step cascade">
+            <li><i class="fa-solid fa-circle"></i><span>Trained on month-end work for for-profit firms.</span></li>
+            <li><i class="fa-solid fa-circle"></i><span>Allocated to an NFP engagement under Kyle — ramped up on grant workflows fast.</span></li>
+            <li><i class="fa-solid fa-circle"></i><span>Saw the pain firsthand: spreadsheet sprawl, version chaos, manual reconciliation.</span></li>
+            <li><i class="fa-solid fa-circle"></i><span>Built GMS end-to-end with Kyle shaping the workflow alongside.</span></li>
+            <li><i class="fa-solid fa-circle"></i><span>Accounting + advisory lens, paired with AI-powered product building.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>ABOUT · 02 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 3 — PROBLEM -->
+  <div class="slide slide-3" data-num="03">
+    <div class="slide-bg"></div>
+    <span class="slide-num">03 · 10</span>
+    <div class="slide-inner">
+      <div class="s3-top">
+        <div class="step">
+          <div class="s3-bignum">8+</div>
+          <div class="s3-bignum-cap">SPREADSHEETS PER CLIENT</div>
+        </div>
+        <div>
+          <div class="kicker blush step"><i class="fa-solid fa-triangle-exclamation"></i> The status quo</div>
+          <h2 class="step">What grant work <span class="accent-text">actually looks like</span> today.</h2>
+          <p class="lead step">Five tools that don't talk to each other. The "source of truth" is wherever someone last saved a file.</p>
+        </div>
+      </div>
+      <div class="flow-wrap step cascade">
+        <div class="flow">
+          <div class="flow-node"><div class="fn-num">1</div><div class="fn-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="fn-label">Grant award</div><div class="fn-tool">PDF · email</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
+          <div class="flow-node"><div class="fn-num">2</div><div class="fn-icon"><i class="fa-solid fa-table"></i></div><div class="fn-label">Budget</div><div class="fn-tool">Excel</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
+          <div class="flow-node"><div class="fn-num">3</div><div class="fn-icon"><i class="fa-solid fa-calculator"></i></div><div class="fn-label">GL pull</div><div class="fn-tool">QuickBooks</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
+          <div class="flow-node"><div class="fn-num">4</div><div class="fn-icon"><i class="fa-solid fa-shuffle"></i></div><div class="fn-label">Allocation</div><div class="fn-tool">Excel + manual</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
+          <div class="flow-node"><div class="fn-num">5</div><div class="fn-icon"><i class="fa-solid fa-receipt"></i></div><div class="fn-label">Reimb.</div><div class="fn-tool">Excel + email</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
+          <div class="flow-node"><div class="fn-num">6</div><div class="fn-icon"><i class="fa-solid fa-file-signature"></i></div><div class="fn-label">Billing</div><div class="fn-tool">Excel · Word</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
+          <div class="flow-node"><div class="fn-num">7</div><div class="fn-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><div class="fn-label">Audit prep</div><div class="fn-tool">Folders · PDFs</div></div>
+        </div>
+      </div>
+      <div class="pain-grid step cascade">
+        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">No source of truth</div><div class="ps">Latest file wins — until it doesn't.</div></div>
+        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">Manual reconciliation</div><div class="ps">Same numbers re-keyed 3+ times.</div></div>
+        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">No audit trail</div><div class="ps">Who changed what, when, why?</div></div>
+        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">Client friction</div><div class="ps">Email attachments, version anxiety.</div></div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>PROBLEM · 03 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 4 — SOLUTION (restored 3-column) -->
+  <div class="slide slide-4" data-num="04">
+    <div class="slide-bg"></div>
+    <span class="slide-num">04 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker sky step"><i class="fa-solid fa-cube"></i> The solution</div>
+      <h2 class="step">GMS turns <span class="accent-text">chaos into a system</span>.</h2>
+      <p class="lead step">Every input flows through one engine. Every output is consistent, audited, and exportable.</p>
+      <div class="blueprint step">
+        <div class="bp-grid">
+          <div class="bp-input">
+            <h4><i class="fa-solid fa-download"></i> Inputs</h4>
+            <div class="bp-item"><i class="fa-solid fa-file-csv"></i> GL extract (CSV)</div>
+            <div class="bp-item"><i class="fa-solid fa-file-pdf"></i> Grant award docs</div>
+            <div class="bp-item"><i class="fa-solid fa-table"></i> Budget templates</div>
+            <div class="bp-item"><i class="fa-solid fa-receipt"></i> Reimb. requests</div>
+            <div class="bp-item"><i class="fa-solid fa-folder-open"></i> Supporting docs</div>
+          </div>
+          <i class="fa-solid fa-arrow-right bp-flow-arrow left"></i>
+          <div class="bp-engine">
+            <div class="engine-core"><i class="fa-solid fa-bolt"></i></div>
+            <div class="e-title">GMS Engine</div>
+            <div class="e-sub">ONE SOURCE OF TRUTH</div>
+            <div class="e-layers">
+              <span class="e-layer">Workspace</span>
+              <span class="e-layer">Portal</span>
+              <span class="e-layer">Audit chain</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right bp-flow-arrow right"></i>
+          <div class="bp-output">
+            <h4><i class="fa-solid fa-upload"></i> Outputs</h4>
+            <div class="bp-out-item"><i class="fa-solid fa-file-invoice"></i> Invoices (3 models)</div>
+            <div class="bp-out-item"><i class="fa-solid fa-file-export"></i> Allocation reports</div>
+            <div class="bp-out-item"><i class="fa-solid fa-magnifying-glass-chart"></i> Audit packages</div>
+            <div class="bp-out-item"><i class="fa-solid fa-clipboard-check"></i> SEFA / Single Audit</div>
+            <div class="bp-out-item"><i class="fa-solid fa-chart-line"></i> Funder schedules</div>
+          </div>
+        </div>
+      </div>
+      <div class="layers-row step cascade">
+        <div class="layer-card">
+          <div class="l-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <div class="l-tag">LAYER 01 · STAFF</div>
+          <h3>Staff workspace</h3>
+          <p>Every grant, every line, every cell — with full history. GL → per-grant expenses in one click.</p>
+          <div class="l-chips"><span class="l-chip">GL Import</span><span class="l-chip">Overrides</span><span class="l-chip">Milestones</span></div>
+        </div>
+        <div class="layer-card">
+          <div class="l-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="l-tag">LAYER 02 · CLIENT</div>
+          <h3>Client portal</h3>
+          <p>Clients see what they need, when they need it. No email attachments. Permissions baked in.</p>
+          <div class="l-chips"><span class="l-chip">Doc exchange</span><span class="l-chip">Approvals</span><span class="l-chip">Branded</span></div>
+        </div>
+        <div class="layer-card">
+          <div class="l-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="l-tag">LAYER 03 · FOUNDATION</div>
+          <h3>Foundation</h3>
+          <p>Multi-tenant, role-based access, audit chain, three billing models — designed in, not bolted on.</p>
+          <div class="l-chips"><span class="l-chip">Multi-tenant</span><span class="l-chip">RBAC</span><span class="l-chip">3 billing</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>SOLUTION · 04 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 6 — DEMO 1 -->
+  <div class="slide slide-5" data-num="05">
+    <div class="slide-bg"></div>
+    <span class="slide-num">05 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker step"><i class="fa-solid fa-play"></i> Demo · 01 · Staff workspace</div>
+      <h2 class="step">The <span class="accent-text">staff workspace</span>, end to end.</h2>
+      <p class="lead step">From GL import to allocation to billing — what used to take a week, in one screen.</p>
+      <div class="s67-stage">
+        <div class="demo-screen step zoom">
+          <video src="Staff_portal.mp4" controls preload="metadata" playsinline></video>
+        </div>
+        <div class="demo-bullets step cascade">
+          <div class="db-h"><div class="di"><i class="fa-solid fa-file-import"></i></div><div><div class="dbt">GL → per-grant expense</div><div class="dbs">CSV imported, matched, tagged automatically.</div></div></div>
+          <div class="db-h"><div class="di"><i class="fa-solid fa-pen-to-square"></i></div><div><div class="dbt">Cell-level override</div><div class="dbs">Change any cell — full audit trail of who, what, when, why.</div></div></div>
+          <div class="db-h"><div class="di"><i class="fa-solid fa-file-invoice"></i></div><div><div class="dbt">One-click billing</div><div class="dbs">Cost-reimb, hourly, milestone — pick the model, generate invoice + backup.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DEMO 01 · 05 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 7 — DEMO 2 -->
+  <div class="slide slide-6" data-num="06">
+    <div class="slide-bg"></div>
+    <span class="slide-num">06 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker mint step"><i class="fa-solid fa-play"></i> Demo · 02 · Client portal</div>
+      <h2 class="step">The <span class="accent-text">client portal</span> — what the client sees.</h2>
+      <p class="lead step">A clean, branded surface for the client. No attachments. No "did you get my file?".</p>
+      <div class="s67-stage">
+        <div class="demo-screen step zoom">
+          <video src="Client_portal.mp4" controls preload="metadata" playsinline></video>
+        </div>
+        <div class="demo-bullets step cascade">
+          <div class="db-h"><div class="di"><i class="fa-solid fa-folder-open"></i></div><div><div class="dbt">Document exchange</div><div class="dbs">Versioned uploads, structured request lists.</div></div></div>
+          <div class="db-h"><div class="di"><i class="fa-solid fa-circle-check"></i></div><div><div class="dbt">In-portal approvals</div><div class="dbs">Clients approve milestones, budgets, deliverables — with timestamp + user.</div></div></div>
+          <div class="db-h"><div class="di"><i class="fa-solid fa-lock"></i></div><div><div class="dbt">Tenant-isolated</div><div class="dbs">Row-level security. Clients only see their own data.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DEMO 02 · 06 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 8 — TRUST (fixed) -->
+  <div class="slide slide-7" data-num="07">
+    <div class="slide-bg"></div>
+    <span class="slide-num">07 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker butter step"><i class="fa-solid fa-shield-check"></i> Demo · 03 · Trust layer</div>
+      <h2 class="step">Audit trail & <span class="accent-text">billing</span>, designed in.</h2>
+      <p class="lead step">Every change captured. Every billing model supported. Both are first-class — not afterthoughts.</p>
+      <div class="s8-twoup step cascade">
+        <div class="shotbox" data-zoom="Override_cell.png" data-caption="Audit trail · cell override history"><img src="Override_cell.png" alt="Audit trail and cell override"><div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i></div><div class="caption"><i class="fa-solid fa-clock-rotate-left"></i><div class="sbt">Audit trail · cell override history</div></div></div>
+        <div class="shotbox" data-zoom="billing_Sum.png" data-caption="Billing summary — three models"><img src="billing_Sum.png" alt="Billing summary — three models"><div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i></div><div class="caption"><i class="fa-solid fa-file-invoice-dollar"></i><div class="sbt">Billing summary — three models</div></div></div>
+      </div>
+      <div class="s8-trust step cascade">
+        <div class="trust"><div class="ti"><i class="fa-solid fa-fingerprint"></i></div><div class="tt">Append-only history</div><div class="ts">Every cell change captured.</div></div>
+        <div class="trust"><div class="ti"><i class="fa-solid fa-scale-balanced"></i></div><div class="tt">Three billing models</div><div class="ts">Cost-reimb, hourly, milestone.</div></div>
+        <div class="trust"><div class="ti"><i class="fa-solid fa-file-export"></i></div><div class="tt">14 export formats</div><div class="ts">SEFA, Single Audit, funder schedules.</div></div>
+        <div class="trust"><div class="ti"><i class="fa-solid fa-key"></i></div><div class="tt">Role-based access</div><div class="ts">Each role sees what they should.</div></div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>TRUST · 07 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 9 — WHY NOW -->
+  <div class="slide slide-8" data-num="08">
+    <div class="slide-bg"></div>
+    <span class="slide-num">08 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker step"><i class="fa-solid fa-arrow-trend-up"></i> Why now</div>
+      <h2 class="step">Why now — and why this <span class="accent-text">matters beyond grants</span>.</h2>
+      <div class="why-stack step cascade">
+        <div class="why">
+          <div class="wi"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Growing demand</h3>
+          <p>NFP and grant-funded work is expanding firm-wide. Delivery has to scale with it — or quietly absorb capacity.</p>
+        </div>
+        <div class="why">
+          <div class="wi"><i class="fa-solid fa-robot"></i></div>
+          <h3>Mechanical work is automatable</h3>
+          <p>The parts staff hate — reconciliation, allocation, billing prep — are exactly what the platform handles. Staff move up the value chain.</p>
+        </div>
+        <div class="why">
+          <div class="wi"><i class="fa-solid fa-warehouse"></i></div>
+          <h3>We already have it</h3>
+          <p>GMS is built and in production. What's left is the choice to use it firm-wide.</p>
+        </div>
+      </div>
+      <div class="market-callout step">
+        <div class="mi"><i class="fa-solid fa-rocket"></i></div>
+        <div>
+          <div class="mt">And beyond the firm — the white-label path.</div>
+          <div class="ms">GMS is multi-tenant from day one. The same platform that powers Citrin's grant practice can be offered to other firms and to nonprofits directly. The architecture is already in place.</div>
+        </div>
+        <div class="mtag">PHASE 3</div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>WHY NOW · 08 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 10 — ECONOMIC BENEFITS (new) -->
+  <div class="slide slide-9" data-num="09">
+    <div class="slide-bg"></div>
+    <span class="slide-num">09 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker mint step"><i class="fa-solid fa-coins"></i> Economic benefits</div>
+      <h2 class="step">40% time saved <span class="accent-text">≈ 3 FTEs back</span>.</h2>
+      <p class="lead step">Translate the time we lose today into people-equivalents — and the case writes itself.</p>
+      <div class="eco-grid">
+        <div class="eco-hero step zoom">
+          <div class="eh-label">The equation</div>
+          <div class="eh-equation">
+            <span class="eh-pct"><span data-count="40">0</span><span class="u">%</span></span>
+            <span class="eh-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            <span class="eh-fte">~<span data-count="3">0</span><span class="u"> FTEs</span></span>
+          </div>
+          <div class="eh-headline">Reclaim ~3 full-time equivalents across the NFP practice.</div>
+          <div class="eh-sub">40% of engagement hours, recovered across the book, equals the capacity of roughly three staff redirected from mechanical work to client-value work.</div>
+        </div>
+        <div class="eco-side step cascade">
+          <div class="eco-card">
+            <div class="eci"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+            <div><div class="ect">Margin improvement</div><div class="ecs">Cost-reimbursement engagements stop leaking hours that can't be billed.</div></div>
+          </div>
+          <div class="eco-card">
+            <div class="eci"><i class="fa-solid fa-user-group"></i></div>
+            <div><div class="ect">Staff redeployed</div><div class="ecs">~3 FTEs available for new engagements, review work, or advisory — without hiring.</div></div>
+          </div>
+          <div class="eco-card">
+            <div class="eci"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div><div class="ect">Client experience</div><div class="ecs">Less chasing, faster billing, cleaner audit packages — fewer escalations to manager and MD.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="eco-foot step"><strong>Method:</strong> 40% time-loss estimate × current NFP-engagement hours ÷ FTE annual hours. Conservative — assumes no growth in NFP book.</div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>ECONOMICS · 09 / 10</span></div>
+  </div>
+
+  <!-- SLIDE 11 — CLOSING -->
+  <div class="slide slide-10 slide-closing" data-num="10">
+    <div class="slide-bg"></div>
+    <span class="slide-num">10 · 10</span>
+    <div class="slide-inner">
+      <div class="kicker step"><i class="fa-solid fa-flag-checkered"></i> The ask</div>
+      <h2 class="step">The tool already exists.<br><span class="accent-text">The only question</span> is whether Citrin uses it —<br>or watches the market catch up.</h2>
+      <div class="closing-punch step"><i class="fa-solid fa-arrow-right"></i> Adopt GMS firm-wide for grant engagements.</div>
+      <div style="text-align:center"><div class="closing-logo step"><div class="sq"><i class="fa-solid fa-shield-halved"></i></div><span>CITRIN COOPERMAN · GMS · 2026</span></div></div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>THE ASK · 10 / 10</span></div>
+  </div>
+
+</div>
+
+<div class="dot-nav" id="dotNav"></div>
+
+<div class="controls">
+  <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+  <span class="counter" id="counter">01 / 10</span>
+  <span class="step-counter" id="stepCounter">·</span>
+  <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<div class="hint"><kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd></div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const deck=document.getElementById('deck');
+const counter=document.getElementById('counter');
+const stepCounter=document.getElementById('stepCounter');
+const prevBtn=document.getElementById('prev');
+const nextBtn=document.getElementById('next');
+const progressBar=document.getElementById('progressBar');
+const dotNav=document.getElementById('dotNav');
+let current=0,stepIdx=-1;
+const total=slides.length;
+
+slides.forEach((s,i)=>{
+  const b=document.createElement('button');
+  b.addEventListener('click',()=>go(i));
+  dotNav.appendChild(b);
+});
+const dots=dotNav.querySelectorAll('button');
+
+function steps(slide){return Array.from(slide.querySelectorAll(':scope .step'))}
+
+function showStep(slide,idx){
+  const s=steps(slide);
+  s.forEach((el,i)=>el.classList.toggle('shown',i<=idx));
+  s.slice(0,idx+1).forEach(el=>{
+    el.querySelectorAll('[data-count]').forEach(c=>{
+      if(c.dataset.done)return;
+      c.dataset.done='1';
+      const target=parseInt(c.dataset.count,10);
+      const start=performance.now();const dur=1100;
+      const tick=(t)=>{
+        const p=Math.min((t-start)/dur,1);
+        const eased=1-Math.pow(1-p,3);
+        c.textContent=Math.round(target*eased);
+        if(p<1)requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  });
+  updateStepCounter();
+}
+
+function updateStepCounter(){
+  const s=steps(slides[current]);
+  if(s.length===0){stepCounter.textContent='·';return}
+  stepCounter.textContent=Math.min(stepIdx+1,s.length)+'/'+s.length;
+}
+
+function go(i){
+  if(i<0||i>=total)return;
+  current=i;stepIdx=-1;
+  deck.style.transform=`translateX(-${i*100}vw)`;
+  slides.forEach((s,idx)=>{if(idx!==i)steps(s).forEach(el=>el.classList.remove('shown'))});
+  dots.forEach((d,idx)=>d.classList.toggle('active',idx===i));
+  counter.textContent=String(i+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
+  progressBar.style.width=((i+1)/total*100)+'%';
+  setTimeout(advanceStep,120);
+}
+
+function advanceStep(){
+  const s=steps(slides[current]);
+  if(stepIdx+1<s.length){stepIdx++;showStep(slides[current],stepIdx);return true}
+  return false;
+}
+
+function next(){if(!advanceStep()){if(current<total-1)go(current+1)}}
+function prev(){if(current>0)go(current-1)}
+
+prevBtn.addEventListener('click',prev);
+nextBtn.addEventListener('click',next);
+
+// Lightbox
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightboxImg');
+const lightboxCaption=document.getElementById('lightboxCaption');
+const lightboxClose=document.getElementById('lightboxClose');
+function openLightbox(src,caption){
+  lightboxImg.src=src;
+  lightboxCaption.textContent=caption||'';
+  lightbox.classList.add('open');
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  setTimeout(()=>{lightboxImg.src=''},300);
+}
+document.querySelectorAll('.shotbox[data-zoom]').forEach(box=>{
+  box.addEventListener('click',()=>openLightbox(box.dataset.zoom,box.dataset.caption));
+});
+lightboxClose.addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)closeLightbox()});
+
+document.addEventListener('keydown',(e)=>{
+  if(lightbox.classList.contains('open')){
+    if(e.key==='Escape'){e.preventDefault();closeLightbox()}
+    return;
+  }
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next()}
+  if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev()}
+  if(e.key==='Home')go(0);
+  if(e.key==='End')go(total-1);
+});
+
+go(0);
+</script>
+</body>
+</html>
