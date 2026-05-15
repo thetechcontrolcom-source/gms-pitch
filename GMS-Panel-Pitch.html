@@ -68,13 +68,17 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .slide-1 .slide-bg{background:radial-gradient(circle at 85% 15%,rgba(106,82,184,0.14),transparent 50%),radial-gradient(circle at 15% 85%,rgba(58,118,176,0.10),transparent 55%)}
 .slide-2 .slide-bg{background:radial-gradient(circle at 90% 10%,rgba(47,125,95,0.10),transparent 55%)}
 .slide-3 .slide-bg{background:radial-gradient(circle at 10% 10%,rgba(168,69,106,0.10),transparent 55%)}
-.slide-4 .slide-bg{background:radial-gradient(circle at 90% 90%,rgba(184,100,64,0.10),transparent 55%)}
-.slide-5 .slide-bg{background:radial-gradient(circle at 10% 90%,rgba(58,118,176,0.10),transparent 55%)}
-.slide-6 .slide-bg{background:radial-gradient(circle at 90% 10%,rgba(106,82,184,0.10),transparent 55%)}
-.slide-7 .slide-bg{background:radial-gradient(circle at 10% 90%,rgba(47,125,95,0.10),transparent 55%)}
-.slide-8 .slide-bg{background:radial-gradient(circle at 90% 50%,rgba(154,118,22,0.10),transparent 55%)}
-.slide-9 .slide-bg{background:radial-gradient(circle at 50% 100%,rgba(106,82,184,0.12),transparent 55%)}
-.slide-10 .slide-bg{background:radial-gradient(circle at 50% 100%,rgba(47,125,95,0.14),transparent 55%),radial-gradient(circle at 100% 0%,rgba(154,118,22,0.10),transparent 55%)}
+.slide-4 .slide-bg{background:radial-gradient(circle at 90% 90%,rgba(47,125,95,0.10),transparent 55%)}
+.slide-5b .slide-bg{background:radial-gradient(circle at 90% 90%,rgba(184,100,64,0.10),transparent 55%),radial-gradient(circle at 10% 10%,rgba(106,82,184,0.10),transparent 55%)}
+.slide-6 .slide-bg{background:radial-gradient(circle at 10% 90%,rgba(58,118,176,0.10),transparent 55%)}
+.slide-7 .slide-bg{background:radial-gradient(circle at 90% 10%,rgba(106,82,184,0.10),transparent 55%)}
+.slide-8 .slide-bg{background:radial-gradient(circle at 10% 90%,rgba(154,118,22,0.10),transparent 55%)}
+.slide-9 .slide-bg{background:radial-gradient(circle at 90% 50%,rgba(58,118,176,0.10),transparent 55%)}
+.slide-10 .slide-bg{background:radial-gradient(circle at 50% 100%,rgba(47,125,95,0.14),transparent 55%)}
+.slide-diff .slide-bg{background:radial-gradient(circle at 90% 10%,rgba(168,69,106,0.10),transparent 55%),radial-gradient(circle at 10% 90%,rgba(184,100,64,0.08),transparent 55%)}
+.slide-hier .slide-bg{background:radial-gradient(circle at 50% 0%,rgba(58,118,176,0.10),transparent 55%),radial-gradient(circle at 50% 100%,rgba(106,82,184,0.08),transparent 55%)}
+.slide-11t .slide-bg{background:radial-gradient(circle at 10% 10%,rgba(58,118,176,0.10),transparent 55%),radial-gradient(circle at 90% 90%,rgba(31,31,58,0.06),transparent 55%)}
+.slide-12 .slide-bg{background:radial-gradient(circle at 50% 100%,rgba(106,82,184,0.14),transparent 55%),radial-gradient(circle at 100% 0%,rgba(154,118,22,0.10),transparent 55%)}
 .slide-closing .slide-bg{background:radial-gradient(circle at 50% 50%,rgba(106,82,184,0.16),transparent 65%)}
 
 .slide-inner{position:relative;z-index:1;width:100%;max-width:1500px;margin:0 auto}
@@ -157,7 +161,7 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 .s2-info h3.name{font-size:1.6rem;font-weight:800;letter-spacing:-0.02em}
 .s2-info .role{font-size:0.88rem;color:var(--ink-3)}
 .s2-info .cred-row{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 22px}
-.s2-info .cred{padding:4px 10px;border-radius:6px;background:var(--lilac);color:var(--lilac-bold);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600}
+.s2-info .cred{padding:5px 12px;border-radius:6px;background:var(--lilac);color:var(--lilac-bold);font-family:'Inter',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.5px}
 .s2-info .cred:nth-child(2){background:var(--mint);color:var(--mint-bold)}
 .s2-info .cred:nth-child(3){background:var(--peach);color:var(--peach-bold)}
 .s2-info .bio{display:flex;flex-direction:column;gap:10px}
@@ -166,9 +170,30 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 .s2-info .bio li span{color:var(--ink-2);font-size:0.9rem;line-height:1.55}
 
 /* SLIDE 3 */
-.s3-top{display:grid;grid-template-columns:auto 1fr;gap:60px;align-items:center;margin-bottom:30px}
-.s3-bignum{font-family:'Instrument Serif',serif;font-style:italic;font-size:9rem;line-height:0.9;color:var(--ink);background:linear-gradient(135deg,var(--blush-bold),var(--peach-bold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.s3-bignum-cap{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:2px;margin-top:4px;text-transform:uppercase}
+.s3-layout{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:start;height:100%}
+.slide-3 h2{font-size:2rem;margin:14px 0 10px;line-height:1.15}
+.slide-3 p.lead{font-size:1rem;line-height:1.5;color:var(--ink-2);max-width:380px}
+.s3-left{position:relative;padding-right:24px;border-right:1px solid var(--border)}
+.s3-mark{margin-top:36px;display:flex;align-items:flex-end;gap:16px}
+.s3-mark-num{font-family:'Instrument Serif',serif;font-style:italic;font-size:9rem;line-height:0.82;background:linear-gradient(135deg,var(--blush-bold),var(--peach-bold) 45%,var(--lilac-bold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 8px 22px rgba(168,69,106,0.22))}
+.s3-mark-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--blush-bold);font-weight:700;padding-bottom:14px;line-height:1.5}
+.s3-stamp{margin-top:22px;display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);padding:8px 12px;border:1px dashed var(--border);border-radius:999px;background:var(--surface)}
+.s3-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.s3-row{position:relative;display:grid;grid-template-columns:auto 44px 1fr auto;align-items:center;gap:18px;padding:16px 20px 16px 22px;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.s3-row::before{content:"";position:absolute;top:0;bottom:0;left:0;width:5px;background:var(--accent,var(--blush-bold))}
+.s3-row::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--accent-soft,var(--blush));opacity:0.5;filter:blur(6px);pointer-events:none}
+.s3-row:hover{transform:translateX(4px);box-shadow:0 10px 24px rgba(31,31,58,0.10);border-color:var(--accent,var(--blush-bold))}
+.s3-rn{font-family:'Instrument Serif',serif;font-style:italic;font-size:2.4rem;line-height:1;color:var(--accent,var(--blush-bold));min-width:46px;font-weight:400}
+.s3-ic{width:44px;height:44px;border-radius:12px;background:var(--accent-soft,var(--blush));color:var(--accent,var(--blush-bold));display:flex;align-items:center;justify-content:center;font-size:19px;position:relative;z-index:1}
+.s3-body{position:relative;z-index:1}
+.s3-t{font-size:15px;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:4px}
+.s3-s{font-size:11.5px;line-height:1.5;color:var(--ink-3)}
+.s3-tag{position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.8px;font-weight:700;color:var(--accent,var(--blush-bold));padding:5px 9px;border:1px solid var(--accent,var(--blush-bold));border-radius:6px;background:var(--surface)}
+.j-blush{--accent:var(--blush-bold);--accent-soft:var(--blush)}
+.j-peach{--accent:var(--peach-bold);--accent-soft:var(--peach)}
+.j-lilac{--accent:var(--lilac-bold);--accent-soft:var(--lilac)}
+.j-sky{--accent:var(--sky-bold);--accent-soft:var(--sky)}
+.j-mint{--accent:var(--mint-bold);--accent-soft:var(--mint)}
 .flow-wrap{margin-top:6px;padding:22px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border)}
 .flow{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;position:relative}
 .flow-node{padding:12px 8px;border-radius:10px;background:var(--bg);border:1px solid var(--border);text-align:center;position:relative;transition:all .3s}
@@ -186,11 +211,18 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 .flow-arrow{position:absolute;top:50%;right:-9px;transform:translateY(-50%);color:var(--muted);font-size:10px;z-index:2;background:var(--surface);padding:0 2px;animation:af 1.6s ease-in-out infinite}
 .flow-node:nth-child(7n) .flow-arrow{display:none}
 @keyframes af{50%{transform:translateY(-50%) translateX(3px);opacity:.5}}
-.pain-grid{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pain-grid{margin-top:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .pain-card{padding:12px;border-radius:10px;background:var(--blush);border:1px solid rgba(168,69,106,0.25)}
 .pain-card i{color:var(--blush-bold);font-size:13px;margin-bottom:5px;display:block}
 .pain-card .pl{font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px}
 .pain-card .ps{font-size:10px;color:var(--ink-3);font-family:'JetBrains Mono',monospace}
+.fix-grid{margin-top:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.fix-card{padding:12px;border-radius:10px;background:var(--mint);border:1px solid rgba(47,125,95,0.25);position:relative}
+.fix-card .fix-num{position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--mint-bold);font-weight:700;letter-spacing:1px}
+.fix-card i.fix-ic{color:var(--mint-bold);font-size:13px;margin-bottom:5px;display:block}
+.fix-card .fl{font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.fix-card .fs{font-size:10px;color:var(--ink-3);font-family:'JetBrains Mono',monospace}
+.fix-card .fp{font-size:9px;color:var(--blush-bold);font-family:'JetBrains Mono',monospace;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
 
 /* SLIDE 4 — Kyle's time budget */
 .s4-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;margin-top:10px}
@@ -232,6 +264,81 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 .s4-quote .q-att{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:6px;text-transform:uppercase}
 
 /* SLIDE 5 — restored 3-column blueprint + 3 layer cards */
+.s4p-head{margin-bottom:14px}
+.slide-4 .s4p-head h2{font-size:1.85rem;margin:10px 0 8px;line-height:1.15}
+.slide-4 .s4p-head p.lead{font-size:0.95rem;line-height:1.5;color:var(--ink-2);max-width:680px}
+.s4p-tablehead{display:grid;grid-template-columns:42px 1.05fr 28px 1.4fr;align-items:center;column-gap:18px;padding:0 22px 10px;margin-bottom:6px;border-bottom:1.5px solid var(--border)}
+.s4p-th-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px}
+.s4p-th{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.s4p-th i{font-size:12px}
+.s4p-th-prob{color:var(--ink-3)}
+.s4p-th-prob i{color:var(--blush-bold)}
+.s4p-th-sol{color:var(--ink)}
+.s4p-th-sol i{color:var(--mint-bold)}
+.s4p-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.s4p-row{position:relative;display:grid;grid-template-columns:42px 1.05fr 28px 1.4fr;align-items:center;column-gap:18px;padding:14px 18px 14px 22px;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.s4p-row::before{content:"";position:absolute;top:0;bottom:0;left:0;width:5px;background:var(--accent,var(--blush-bold))}
+.s4p-row::after{content:"";position:absolute;right:-50px;top:-60px;width:180px;height:180px;border-radius:50%;background:var(--accent-soft,var(--blush));opacity:0.40;filter:blur(10px);pointer-events:none}
+.s4p-row:hover{transform:translateX(3px);box-shadow:0 10px 24px rgba(31,31,58,0.10);border-color:var(--accent)}
+.s4p-rn{font-family:'Instrument Serif',serif;font-style:italic;font-size:2.2rem;line-height:1;color:var(--accent,var(--blush-bold));position:relative;z-index:1}
+.s4p-prob,.s4p-sol{position:relative;z-index:1;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:12px;row-gap:2px;align-items:center}
+.s4p-prob{opacity:0.78}
+.s4p-pic,.s4p-sic{grid-column:1;grid-row:1 / span 2;width:36px;height:36px;border-radius:10px;background:var(--accent-soft,var(--blush));color:var(--accent,var(--blush-bold));display:flex;align-items:center;justify-content:center;font-size:15px}
+.s4p-pic{background:rgba(31,31,58,0.06);color:var(--ink-2)}
+.s4p-pt{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:13px;font-weight:700;color:var(--ink);line-height:1.25;text-decoration:line-through;text-decoration-color:rgba(168,69,106,0.55);text-decoration-thickness:1.5px}
+.s4p-st{grid-column:2;font-size:14px;font-weight:700;color:var(--ink);line-height:1.2}
+.s4p-ss{grid-column:2;font-size:11px;line-height:1.45;color:var(--ink-3);margin-top:1px}
+.s4p-div{position:relative;z-index:1;height:36px;width:1px;background:var(--border);margin:0 auto;justify-self:center}
+
+.s4-head{margin-bottom:14px}
+.slide-4 h2{font-size:2rem;margin:10px 0 8px;line-height:1.15}
+.slide-4 p.lead{font-size:1rem;line-height:1.5;color:var(--ink-2);max-width:680px}
+.s4-hero{display:grid;grid-template-columns:0.85fr 40px 1fr 40px 1.55fr;gap:14px;align-items:stretch;padding:22px 18px;border-radius:18px;background:linear-gradient(180deg,var(--surface),rgba(245,243,238,0.6));border:1px solid var(--border);box-shadow:0 10px 28px rgba(31,31,58,0.08);margin-bottom:18px;position:relative;overflow:hidden}
+.s4-out .s4-col-items{display:grid;grid-template-columns:1fr 1fr;gap:6px 8px}
+.s4-hero::before{content:"";position:absolute;top:-80px;left:-80px;width:220px;height:220px;border-radius:50%;background:rgba(184,100,64,0.10);filter:blur(40px)}
+.s4-hero::after{content:"";position:absolute;bottom:-80px;right:-80px;width:220px;height:220px;border-radius:50%;background:rgba(47,125,95,0.10);filter:blur(40px)}
+.s4-col{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:14px;background:var(--surface);border:1px solid var(--border)}
+.s4-in{border-left:4px solid var(--peach-bold)}
+.s4-out{border-left:4px solid var(--mint-bold)}
+.s4-col-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.s4-col-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;font-weight:700;color:var(--ink-2)}
+.s4-in .s4-col-tag{color:var(--peach-bold)}
+.s4-out .s4-col-tag{color:var(--mint-bold)}
+.s4-col-head i{font-size:14px;color:var(--ink-3)}
+.s4-col-items{display:flex;flex-direction:column;gap:6px}
+.s4-pill{display:flex;align-items:center;gap:9px;padding:8px 11px;border-radius:9px;background:var(--bg);border:1px solid var(--border);font-size:11.5px;color:var(--ink-2);font-weight:500}
+.s4-pill i{font-size:12px;width:14px;text-align:center}
+.s4-incards{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.s4-incard{position:relative;padding:14px 14px 12px;border-radius:12px;background:linear-gradient(180deg,rgba(184,100,64,0.06),var(--bg));border:1px solid rgba(184,100,64,0.25);box-shadow:0 4px 12px rgba(184,100,64,0.10);transition:transform .25s ease, box-shadow .25s ease}
+.s4-incard:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(184,100,64,0.18)}
+.s4-incic{width:42px;height:42px;border-radius:11px;background:var(--peach);color:var(--peach-bold);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:9px}
+.s4-inct{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:4px}
+.s4-incs{font-size:10.5px;line-height:1.45;color:var(--ink-3)}
+.s4-inctag{position:absolute;top:14px;right:14px;font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:1.4px;font-weight:700;color:var(--peach-bold);padding:3px 7px;border:1px solid rgba(184,100,64,0.40);border-radius:5px;background:var(--surface)}
+.s4-in .s4-pill i{color:var(--peach-bold)}
+.s4-out .s4-pill i{color:var(--mint-bold)}
+.s4-pill em{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);font-style:normal;margin-left:4px;letter-spacing:0.5px;text-transform:uppercase}
+.s4-flow{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--lilac-bold);opacity:0.6}
+.s4-engine{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px 14px;border-radius:14px;background:linear-gradient(140deg,var(--lilac),var(--sky));border:1px solid rgba(106,82,184,0.40);box-shadow:0 10px 28px rgba(106,82,184,0.20)}
+.s4-eng-ring{width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;margin-bottom:10px;box-shadow:0 0 0 6px rgba(255,255,255,0.35),0 12px 24px rgba(106,82,184,0.30);animation:pulse-soft 3s ease-in-out infinite}
+.s4-eng-core{width:54px;height:54px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center}
+.s4-eng-core i{font-size:22px;color:var(--lilac-bold)}
+.s4-eng-title{font-size:1.1rem;font-weight:700;color:var(--ink)}
+.s4-eng-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink-2);letter-spacing:1.5px;margin-top:3px;font-weight:700}
+.s4-eng-layers{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.s4-eng-layers span{padding:4px 9px;border-radius:6px;background:rgba(255,255,255,0.78);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink);font-weight:600;letter-spacing:0.5px}
+.s4-strip-head{margin-bottom:10px}
+.s4-strip-kicker{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mint-bold);font-weight:700;padding:7px 12px;border:1px dashed var(--mint-bold);border-radius:999px;background:var(--surface)}
+.s4-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.s4-fix{position:relative;padding:16px 14px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;gap:6px;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.s4-fix::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent,var(--mint-bold))}
+.s4-fix::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:var(--accent-soft,var(--mint));opacity:0.55;filter:blur(8px);pointer-events:none}
+.s4-fix:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(31,31,58,0.12);border-color:var(--accent)}
+.s4-fn{position:relative;z-index:1;font-family:'Instrument Serif',serif;font-style:italic;font-size:1.9rem;line-height:1;color:var(--accent,var(--mint-bold))}
+.s4-fi{position:relative;z-index:1;width:38px;height:38px;border-radius:10px;background:var(--accent-soft,var(--mint));color:var(--accent,var(--mint-bold));display:flex;align-items:center;justify-content:center;font-size:16px;margin-top:2px}
+.s4-ft{position:relative;z-index:1;font-size:13px;font-weight:700;color:var(--ink);line-height:1.25;margin-top:4px}
+.s4-fp{position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+
 .blueprint{margin-top:16px;padding:20px;border-radius:14px;background:var(--surface);border:1px solid var(--border)}
 .bp-grid{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:16px;align-items:stretch;position:relative}
 .bp-input,.bp-output,.bp-engine{padding:16px;border-radius:10px;display:flex;flex-direction:column;gap:6px}
@@ -273,6 +380,14 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 .demo-screen::before{content:'';position:absolute;top:0;left:0;right:0;height:28px;background:var(--surface);border-bottom:1px solid var(--border);z-index:3}
 .demo-screen::after{content:'';position:absolute;top:11px;left:14px;width:7px;height:7px;border-radius:50%;background:#ff8a85;box-shadow:12px 0 0 #fec76a,24px 0 0 #6dd99c;z-index:4}
 .demo-screen video{position:absolute;top:28px;left:0;right:0;bottom:0;width:100%;height:calc(100% - 28px);object-fit:contain;background:#000;display:block;z-index:1}
+.demo-expand{position:absolute;top:36px;right:14px;z-index:5;width:34px;height:34px;border-radius:8px;border:none;background:rgba(0,0,0,0.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;opacity:0;transition:opacity .2s ease, background .2s ease, transform .2s ease;backdrop-filter:blur(4px)}
+.demo-screen:hover .demo-expand,.demo-expand:focus{opacity:1}
+.demo-expand:hover{background:rgba(0,0,0,0.78);transform:scale(1.06)}
+.video-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:10000;display:none;align-items:center;justify-content:center;padding:40px}
+.video-overlay.open{display:flex}
+.video-overlay video{max-width:100%;max-height:100%;width:auto;height:auto;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+.video-overlay-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.1);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;backdrop-filter:blur(8px);transition:background .2s ease, transform .2s ease}
+.video-overlay-close:hover{background:rgba(255,255,255,0.2);transform:scale(1.06)}
 .play-orb{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--lilac-bold),var(--sky-bold));display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(106,82,184,0.40);position:relative;cursor:pointer;animation:play-pulse 2.5s ease-in-out infinite}
 .play-orb::before,.play-orb::after{content:'';position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--lilac-bold);animation:ripple 2s ease-out infinite}
 .play-orb::after{animation-delay:1s}
@@ -372,7 +487,92 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 .eco-foot{margin-top:20px;padding:14px 18px;border-radius:10px;background:var(--surface-alt);border:1px dashed var(--border-strong);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-3);line-height:1.6}
 .eco-foot strong{color:var(--ink);font-weight:600}
 
-/* SLIDE 11 closing */
+/* SLIDE 9 — DIFFERENTIATOR */
+.s9d-head{margin-bottom:14px}
+.slide-diff h2{font-size:1.6rem;margin:10px 0 8px;line-height:1.2}
+.slide-diff p.lead{font-size:0.95rem;line-height:1.5;color:var(--ink-2);max-width:880px}
+.s9d-cases{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.s9d-case{position:relative;padding:14px 14px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--border);box-shadow:0 4px 14px rgba(31,31,58,0.06);display:flex;flex-direction:column;gap:10px}
+.s9d-case-head{display:flex;align-items:flex-start;gap:10px;padding-bottom:8px;border-bottom:1px dashed var(--border)}
+.s9d-cn{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.9rem;line-height:0.9;color:var(--blush-bold);flex-shrink:0}
+.s9d-ct{font-size:13px;font-weight:700;color:var(--ink);line-height:1.3}
+.s9d-cmp{display:flex;flex-direction:column;gap:10px}
+.s9d-them,.s9d-us{padding:10px 12px;border-radius:10px}
+.s9d-them{background:rgba(168,69,106,0.06);border:1px solid rgba(168,69,106,0.20)}
+.s9d-us{background:rgba(47,125,95,0.07);border:1px solid rgba(47,125,95,0.25)}
+.s9d-lbl{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;margin-bottom:5px}
+.s9d-them .s9d-lbl{color:var(--blush-bold)}
+.s9d-us .s9d-lbl{color:var(--mint-bold)}
+.s9d-lbl i{font-size:11px}
+.s9d-them p,.s9d-us p{font-size:11px;line-height:1.5;color:var(--ink-2);margin:0}
+.s9d-foot{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(168,69,106,0.06),rgba(47,125,95,0.06));border:1px solid var(--border);font-size:11.5px;line-height:1.5;color:var(--ink-2)}
+.s9d-foot i{color:var(--blush-bold);font-size:14px;flex-shrink:0}
+.s9d-foot em{font-style:italic;font-weight:700;color:var(--ink)}
+
+/* SLIDE 10 — ROLE HIERARCHY & PORTALS */
+.s10h-head{margin-bottom:14px}
+.slide-hier h2{font-size:1.85rem;margin:10px 0 8px;line-height:1.15}
+.slide-hier p.lead{font-size:0.95rem;line-height:1.5;color:var(--ink-2);max-width:760px}
+.s10h-tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:14px}
+.s10h-tile{position:relative;border-radius:12px;background:var(--surface);border:1px solid var(--border);box-shadow:0 6px 18px rgba(31,31,58,0.08);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease}
+.s10h-tile:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(31,31,58,0.14)}
+.s10h-tbar{display:flex;align-items:center;gap:8px;padding:7px 10px;background:linear-gradient(180deg,var(--bg),var(--surface));border-bottom:1px solid var(--border)}
+.s10h-dots{display:inline-flex;gap:4px}
+.s10h-dots i{width:8px;height:8px;border-radius:50%;background:var(--accent,var(--sky-bold));opacity:0.55}
+.s10h-dots i:nth-child(2){opacity:0.35}
+.s10h-dots i:nth-child(3){opacity:0.20}
+.s10h-turl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink-3);letter-spacing:0.5px;margin-left:auto;background:var(--bg);border:1px solid var(--border);padding:3px 7px;border-radius:5px;max-width:65%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s10h-tbody{padding:12px 12px 14px;display:flex;flex-direction:column;gap:9px;flex:1;background:linear-gradient(180deg,color-mix(in srgb,var(--accent-soft,var(--sky)) 35%,transparent),transparent 60%)}
+.s10h-trole{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink)}
+.s10h-trole i{width:30px;height:30px;border-radius:8px;background:var(--accent-soft,var(--sky));color:var(--accent,var(--sky-bold));display:flex;align-items:center;justify-content:center;font-size:14px}
+.s10h-tscope{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent,var(--sky-bold));font-weight:700;margin-top:-4px;padding-left:38px}
+.s10h-tnav{display:flex;flex-wrap:wrap;gap:4px;padding-bottom:8px;border-bottom:1px dashed var(--border)}
+.s10h-pill{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.5px;font-weight:700;padding:3px 7px;border-radius:5px;background:var(--bg);color:var(--ink-3);border:1px solid var(--border)}
+.s10h-pill.active{background:var(--accent,var(--sky-bold));color:#fff;border-color:var(--accent,var(--sky-bold))}
+.s10h-tstack{display:flex;flex-direction:column;gap:6px}
+.s10h-tline{display:flex;align-items:flex-start;gap:7px;font-size:10.5px;line-height:1.4;color:var(--ink-2);font-weight:500}
+.s10h-tline em{font-family:'JetBrains Mono',monospace;font-style:normal;font-size:8.5px;color:var(--muted);font-weight:600;margin-left:4px}
+.s10h-tdot{width:5px;height:5px;border-radius:50%;background:var(--accent,var(--sky-bold));margin-top:6px;flex-shrink:0}
+.s10h-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.s10h-fcard{display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--border);box-shadow:0 4px 12px rgba(31,31,58,0.05)}
+.s10h-fcard > i{font-size:18px;color:var(--lilac-bold);width:32px;height:32px;border-radius:9px;background:var(--lilac);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.s10h-ft{font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:2px}
+.s10h-fs{font-size:10.5px;line-height:1.45;color:var(--ink-3)}
+
+/* SLIDE 11 — TECH STACK */
+.s11-head{margin-bottom:14px}
+.slide-11t h2{font-size:1.85rem;margin:10px 0 6px;line-height:1.18}
+.slide-11t p.lead{font-size:0.95rem;line-height:1.5;color:var(--ink-2);max-width:680px}
+.s11-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.s11-card{position:relative;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border);box-shadow:0 4px 14px rgba(31,31,58,0.06);transition:transform .25s ease, box-shadow .25s ease;overflow:hidden}
+.s11-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent,var(--sky-bold))}
+.s11-card:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(31,31,58,0.10)}
+.s11-be{--accent:var(--lilac-bold)}
+.s11-fe{--accent:var(--sky-bold)}
+.s11-db{--accent:var(--peach-bold)}
+.s11-lib{--accent:var(--mint-bold)}
+.s11-host{--accent:var(--blush-bold)}
+.s11-sec{--accent:#9a7616}
+.s11-ch{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed var(--border)}
+.s11-ic{width:32px;height:32px;border-radius:9px;background:color-mix(in srgb,var(--accent) 14%,var(--surface));color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:14px}
+.s11-ct{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.s11-body{display:flex;flex-direction:column;gap:5px}
+.s11-body p{font-size:12px;line-height:1.45;color:var(--ink);font-weight:600;margin:0}
+.s11-body p em{font-family:'JetBrains Mono',monospace;font-style:normal;font-size:10px;color:var(--muted);font-weight:600;letter-spacing:0.3px}
+.s11-body p.s11-sub{font-size:11px;color:var(--ink-3);font-weight:500}
+.s11-pillars-label{margin:0 0 8px}
+.s11-pl-tag{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--muted);padding:5px 10px;border:1px dashed var(--border);border-radius:999px}
+.s11-foot{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:stretch;padding:14px 18px;border-radius:14px;background:linear-gradient(135deg,rgba(58,118,176,0.08),rgba(106,82,184,0.06));border:1px solid var(--border)}
+.s11-foot-glance{display:flex;flex-direction:column;gap:6px;padding-right:18px;border-right:1px solid var(--border)}
+.s11-foot-maint{display:flex;flex-direction:column;gap:6px}
+.s11-foot-label{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.s11-foot-label i{color:var(--sky-bold);font-size:12px}
+.s11-foot-stats{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:13px;font-weight:700;color:var(--ink)}
+.s11-foot-stats span{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.15rem;font-weight:400}
+.s11-dot{color:var(--muted);font-weight:400;font-style:normal !important;font-family:inherit !important;font-size:1rem !important}
+.s11-foot-maint p{font-size:11.5px;line-height:1.5;color:var(--ink-2);margin:0}
+
+/* SLIDE 12 closing */
 .slide-closing{justify-content:center;text-align:center}
 .slide-closing .slide-inner{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .slide-closing .kicker{margin-left:auto;margin-right:auto}
@@ -471,109 +671,232 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
     <div class="slide-bg"></div>
     <span class="slide-num">03 · 10</span>
     <div class="slide-inner">
-      <div class="s3-top">
-        <div class="step">
-          <div class="s3-bignum">8+</div>
-          <div class="s3-bignum-cap">SPREADSHEETS PER CLIENT</div>
-        </div>
-        <div>
-          <div class="kicker blush step"><i class="fa-solid fa-triangle-exclamation"></i> The status quo</div>
-          <h2 class="step">What grant work <span class="accent-text">actually looks like</span> today.</h2>
-          <p class="lead step">Five tools that don't talk to each other. The "source of truth" is wherever someone last saved a file.</p>
-        </div>
-      </div>
-      <div class="flow-wrap step cascade">
-        <div class="flow">
-          <div class="flow-node"><div class="fn-num">1</div><div class="fn-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="fn-label">Grant award</div><div class="fn-tool">PDF · email</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
-          <div class="flow-node"><div class="fn-num">2</div><div class="fn-icon"><i class="fa-solid fa-table"></i></div><div class="fn-label">Budget</div><div class="fn-tool">Excel</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
-          <div class="flow-node"><div class="fn-num">3</div><div class="fn-icon"><i class="fa-solid fa-calculator"></i></div><div class="fn-label">GL pull</div><div class="fn-tool">QuickBooks</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
-          <div class="flow-node"><div class="fn-num">4</div><div class="fn-icon"><i class="fa-solid fa-shuffle"></i></div><div class="fn-label">Allocation</div><div class="fn-tool">Excel + manual</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
-          <div class="flow-node"><div class="fn-num">5</div><div class="fn-icon"><i class="fa-solid fa-receipt"></i></div><div class="fn-label">Reimb.</div><div class="fn-tool">Excel + email</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
-          <div class="flow-node"><div class="fn-num">6</div><div class="fn-icon"><i class="fa-solid fa-file-signature"></i></div><div class="fn-label">Billing</div><div class="fn-tool">Excel · Word</div><i class="fa-solid fa-arrow-right flow-arrow"></i></div>
-          <div class="flow-node"><div class="fn-num">7</div><div class="fn-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><div class="fn-label">Audit prep</div><div class="fn-tool">Folders · PDFs</div></div>
-        </div>
-      </div>
-      <div class="pain-grid step cascade">
-        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">No source of truth</div><div class="ps">Latest file wins — until it doesn't.</div></div>
-        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">Manual reconciliation</div><div class="ps">Same numbers re-keyed 3+ times.</div></div>
-        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">No audit trail</div><div class="ps">Who changed what, when, why?</div></div>
-        <div class="pain-card"><i class="fa-solid fa-circle-exclamation"></i><div class="pl">Client friction</div><div class="ps">Email attachments, version anxiety.</div></div>
+      <div class="s3-layout">
+        <aside class="s3-left step">
+          <div class="kicker blush"><i class="fa-solid fa-triangle-exclamation"></i> The status quo</div>
+          <h2>What grant work <span class="accent-text">actually looks like</span> today.</h2>
+          <p class="lead">Tools that don't talk to each other. The "source of truth" is wherever someone last saved a file.</p>
+          <div class="s3-mark">
+            <span class="s3-mark-num">05</span>
+            <span class="s3-mark-lbl">structural<br/>problems</span>
+          </div>
+          <div class="s3-stamp"><i class="fa-solid fa-clock-rotate-left"></i> every engagement · every month-end</div>
+        </aside>
+        <ol class="s3-list step cascade">
+          <li class="s3-row j-blush">
+            <span class="s3-rn">01</span>
+            <div class="s3-ic"><i class="fa-solid fa-folder-tree"></i></div>
+            <div class="s3-body">
+              <div class="s3-t">Fragmented documentation</div>
+              <div class="s3-s">Award letters, budgets, and support docs scattered across drives, email, and local folders.</div>
+            </div>
+            <span class="s3-tag">DOCS</span>
+          </li>
+          <li class="s3-row j-peach">
+            <span class="s3-rn">02</span>
+            <div class="s3-ic"><i class="fa-solid fa-table-cells-large"></i></div>
+            <div class="s3-body">
+              <div class="s3-t">Disconnected Excel workbooks</div>
+              <div class="s3-s">Version-fragmented spreadsheets — no shared structure, no single ledger.</div>
+            </div>
+            <span class="s3-tag">DATA</span>
+          </li>
+          <li class="s3-row j-lilac">
+            <span class="s3-rn">03</span>
+            <div class="s3-ic"><i class="fa-solid fa-pen-to-square"></i></div>
+            <div class="s3-body">
+              <div class="s3-t">No structured adjustment layer</div>
+              <div class="s3-s">Reclassifications and overrides happen in-cell, with no workflow or controls.</div>
+            </div>
+            <span class="s3-tag">CONTROL</span>
+          </li>
+          <li class="s3-row j-sky">
+            <span class="s3-rn">04</span>
+            <div class="s3-ic"><i class="fa-solid fa-clipboard-list"></i></div>
+            <div class="s3-body">
+              <div class="s3-t">No clean transaction record</div>
+              <div class="s3-s">No auditable trail of what changed, who changed it, and why.</div>
+            </div>
+            <span class="s3-tag">AUDIT</span>
+          </li>
+          <li class="s3-row j-mint">
+            <span class="s3-rn">05</span>
+            <div class="s3-ic"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="s3-body">
+              <div class="s3-t">Constant client queries</div>
+              <div class="s3-s">Recurring calls and emails — clients can't navigate accounting software for status or balances.</div>
+            </div>
+            <span class="s3-tag">CLIENT</span>
+          </li>
+        </ol>
       </div>
     </div>
     <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>PROBLEM · 03 / 10</span></div>
   </div>
 
-  <!-- SLIDE 4 — SOLUTION (restored 3-column) -->
+  <!-- SLIDE 4 — SOLUTIONS PAIRED TO PROBLEMS -->
   <div class="slide slide-4" data-num="04">
     <div class="slide-bg"></div>
-    <span class="slide-num">04 · 10</span>
+    <span class="slide-num">04 · 14</span>
     <div class="slide-inner">
-      <div class="kicker sky step"><i class="fa-solid fa-cube"></i> The solution</div>
-      <h2 class="step">GMS turns <span class="accent-text">chaos into a system</span>.</h2>
-      <p class="lead step">Every input flows through one engine. Every output is consistent, audited, and exportable.</p>
-      <div class="blueprint step">
-        <div class="bp-grid">
-          <div class="bp-input">
-            <h4><i class="fa-solid fa-download"></i> Inputs</h4>
-            <div class="bp-item"><i class="fa-solid fa-file-csv"></i> GL extract (CSV)</div>
-            <div class="bp-item"><i class="fa-solid fa-file-pdf"></i> Grant award docs</div>
-            <div class="bp-item"><i class="fa-solid fa-table"></i> Budget templates</div>
-            <div class="bp-item"><i class="fa-solid fa-receipt"></i> Reimb. requests</div>
-            <div class="bp-item"><i class="fa-solid fa-folder-open"></i> Supporting docs</div>
+      <div class="s4p-head step">
+        <div class="kicker mint"><i class="fa-solid fa-circle-check"></i> The solution</div>
+        <h2>GMS turns <span class="accent-text">chaos into a system</span>.</h2>
+        <p class="lead">Retires each problem with a feature that's already live in production.</p>
+      </div>
+      <div class="s4p-tablehead step">
+        <span class="s4p-th-num">#</span>
+        <span class="s4p-th s4p-th-prob"><i class="fa-solid fa-triangle-exclamation"></i> Problems</span>
+        <span class="s4p-th-gap"></span>
+        <span class="s4p-th s4p-th-sol"><i class="fa-solid fa-circle-check"></i> Solutions</span>
+      </div>
+      <ol class="s4p-list step cascade">
+        <li class="s4p-row j-blush">
+          <span class="s4p-rn">01</span>
+          <div class="s4p-prob">
+            
+            <div class="s4p-pic"><i class="fa-solid fa-folder-tree"></i></div>
+            <div class="s4p-pt">Fragmented documentation</div>
           </div>
-          <i class="fa-solid fa-arrow-right bp-flow-arrow left"></i>
-          <div class="bp-engine">
-            <div class="engine-core"><i class="fa-solid fa-bolt"></i></div>
-            <div class="e-title">GMS Engine</div>
-            <div class="e-sub">ONE SOURCE OF TRUTH</div>
-            <div class="e-layers">
-              <span class="e-layer">Workspace</span>
-              <span class="e-layer">Portal</span>
-              <span class="e-layer">Audit chain</span>
+          <div class="s4p-div"></div>
+          <div class="s4p-sol">
+            
+            <div class="s4p-sic"><i class="fa-solid fa-folder-closed"></i></div>
+            <div class="s4p-st">Central document vault</div>
+            <div class="s4p-ss">Every award letter, budget, and support file attached to its grant — one place, permissioned.</div>
+          </div>
+        </li>
+        <li class="s4p-row j-peach">
+          <span class="s4p-rn">02</span>
+          <div class="s4p-prob">
+            
+            <div class="s4p-pic"><i class="fa-solid fa-table-cells-large"></i></div>
+            <div class="s4p-pt">Disconnected Excel workbooks</div>
+          </div>
+          <div class="s4p-div"></div>
+          <div class="s4p-sol">
+            
+            <div class="s4p-sic"><i class="fa-solid fa-database"></i></div>
+            <div class="s4p-st">One unified workbook</div>
+            <div class="s4p-ss">Engine-driven ledger replaces parallel spreadsheets — every grant on the same structure.</div>
+          </div>
+        </li>
+        <li class="s4p-row j-lilac">
+          <span class="s4p-rn">03</span>
+          <div class="s4p-prob">
+            
+            <div class="s4p-pic"><i class="fa-solid fa-pen-to-square"></i></div>
+            <div class="s4p-pt">No structured adjustment layer</div>
+          </div>
+          <div class="s4p-div"></div>
+          <div class="s4p-sol">
+            
+            <div class="s4p-sic"><i class="fa-solid fa-sliders"></i></div>
+            <div class="s4p-st">Structured override workflow</div>
+            <div class="s4p-ss">Reclassifications happen in a controlled layer — reviewed, logged, reversible.</div>
+          </div>
+        </li>
+        <li class="s4p-row j-sky">
+          <span class="s4p-rn">04</span>
+          <div class="s4p-prob">
+            
+            <div class="s4p-pic"><i class="fa-solid fa-clipboard-list"></i></div>
+            <div class="s4p-pt">No clean transaction record</div>
+          </div>
+          <div class="s4p-div"></div>
+          <div class="s4p-sol">
+            
+            <div class="s4p-sic"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="s4p-st">Immutable audit chain</div>
+            <div class="s4p-ss">Every change captured with user, timestamp, and reason — export-ready for audit.</div>
+          </div>
+        </li>
+        <li class="s4p-row j-mint">
+          <span class="s4p-rn">05</span>
+          <div class="s4p-prob">
+            
+            <div class="s4p-pic"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="s4p-pt">Constant client queries</div>
+          </div>
+          <div class="s4p-div"></div>
+          <div class="s4p-sol">
+            
+            <div class="s4p-sic"><i class="fa-solid fa-circle-user"></i></div>
+            <div class="s4p-st">Self-serve client portal</div>
+            <div class="s4p-ss">Clients see status, balances, and documents directly — no GL access, no back-and-forth.</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>SOLUTION · 04 / 14</span></div>
+  </div>
+
+  <!-- SLIDE 5 — CHAOS INTO A SYSTEM (engine blueprint) -->
+  <div class="slide slide-5b" data-num="05">
+    <div class="slide-bg"></div>
+    <span class="slide-num">05 · 14</span>
+    <div class="slide-inner">
+      <div class="s4-head step">
+        <div class="kicker sky"><i class="fa-solid fa-cube"></i> The engine</div>
+        <h2>How the <span class="accent-text">GMS engine</span> works.</h2>
+        <p class="lead">Staff hand GMS the GL and the engagement documents. The platform produces every workbook, invoice, and report the engagement needs.</p>
+      </div>
+      <div class="s4-hero step">
+        <div class="s4-col s4-in">
+          <div class="s4-col-head"><span class="s4-col-tag">INPUTS</span><i class="fa-solid fa-download"></i></div>
+          <div class="s4-incards">
+            <div class="s4-incard">
+              <div class="s4-incic"><i class="fa-solid fa-file-csv"></i></div>
+              <div class="s4-inct">GL import</div>
+              <div class="s4-incs">QuickBooks / Sage export, CSV — mapped to grants automatically.</div>
+              <span class="s4-inctag">CSV</span>
+            </div>
+            <div class="s4-incard">
+              <div class="s4-incic"><i class="fa-solid fa-folder-open"></i></div>
+              <div class="s4-inct">Uploaded documents</div>
+              <div class="s4-incs">Award letters, budgets, contracts, support — attached to each grant.</div>
+              <span class="s4-inctag">PDF · XLSX</span>
             </div>
           </div>
-          <i class="fa-solid fa-arrow-right bp-flow-arrow right"></i>
-          <div class="bp-output">
-            <h4><i class="fa-solid fa-upload"></i> Outputs</h4>
-            <div class="bp-out-item"><i class="fa-solid fa-file-invoice"></i> Invoices (3 models)</div>
-            <div class="bp-out-item"><i class="fa-solid fa-file-export"></i> Allocation reports</div>
-            <div class="bp-out-item"><i class="fa-solid fa-magnifying-glass-chart"></i> Audit packages</div>
-            <div class="bp-out-item"><i class="fa-solid fa-clipboard-check"></i> SEFA / Single Audit</div>
-            <div class="bp-out-item"><i class="fa-solid fa-chart-line"></i> Funder schedules</div>
+        </div>
+        <div class="s4-flow s4-flow-l"><i class="fa-solid fa-arrow-right-long"></i></div>
+        <div class="s4-engine">
+          <div class="s4-eng-ring">
+            <div class="s4-eng-core"><i class="fa-solid fa-bolt"></i></div>
+          </div>
+          <div class="s4-eng-title">GMS Engine</div>
+          <div class="s4-eng-sub">ONE SOURCE OF TRUTH</div>
+          <div class="s4-eng-layers">
+            <span>Workspace</span><span>Portal</span><span>Reports</span>
           </div>
         </div>
-      </div>
-      <div class="layers-row step cascade">
-        <div class="layer-card">
-          <div class="l-icon"><i class="fa-solid fa-user-tie"></i></div>
-          <div class="l-tag">LAYER 01 · STAFF</div>
-          <h3>Staff workspace</h3>
-          <p>Every grant, every line, every cell — with full history. GL → per-grant expenses in one click.</p>
-          <div class="l-chips"><span class="l-chip">GL Import</span><span class="l-chip">Overrides</span><span class="l-chip">Milestones</span></div>
-        </div>
-        <div class="layer-card">
-          <div class="l-icon"><i class="fa-solid fa-users"></i></div>
-          <div class="l-tag">LAYER 02 · CLIENT</div>
-          <h3>Client portal</h3>
-          <p>Clients see what they need, when they need it. No email attachments. Permissions baked in.</p>
-          <div class="l-chips"><span class="l-chip">Doc exchange</span><span class="l-chip">Approvals</span><span class="l-chip">Branded</span></div>
-        </div>
-        <div class="layer-card">
-          <div class="l-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="l-tag">LAYER 03 · FOUNDATION</div>
-          <h3>Foundation</h3>
-          <p>Multi-tenant, role-based access, audit chain, three billing models — designed in, not bolted on.</p>
-          <div class="l-chips"><span class="l-chip">Multi-tenant</span><span class="l-chip">RBAC</span><span class="l-chip">3 billing</span></div>
+        <div class="s4-flow s4-flow-r"><i class="fa-solid fa-arrow-right-long"></i></div>
+        <div class="s4-col s4-out">
+          <div class="s4-col-head"><span class="s4-col-tag">OUTPUTS · accounting deliverables</span><i class="fa-solid fa-upload"></i></div>
+          <div class="s4-col-items">
+            <div class="s4-pill"><i class="fa-solid fa-table"></i><span>Per-grant workbook</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-chart-pie"></i><span>Grant Expenditure Summary</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-shuffle"></i><span>Cross-Grant Category Analysis</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-coins"></i><span>Cash Position Report</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-file-invoice-dollar"></i><span>Billable vs. Collected</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-clock"></i><span>Hours by Employee / Grant</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-receipt"></i><span>Invoice Aging Report</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-landmark"></i><span>Funder-Ready Statements</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-chart-line"></i><span>Budget vs. Actual Dashboards</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-filter"></i><span>Grant Pipeline Report</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-briefcase"></i><span>Portfolio Summary</span></div>
+            <div class="s4-pill"><i class="fa-solid fa-file-export"></i><span>Balance Export <em>PDF · XLSX</em></span></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>SOLUTION · 04 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>SYSTEM · 05 / 14</span></div>
   </div>
 
   <!-- SLIDE 6 — DEMO 1 -->
-  <div class="slide slide-5" data-num="05">
+  <div class="slide slide-6" data-num="06">
     <div class="slide-bg"></div>
-    <span class="slide-num">05 · 10</span>
+    <span class="slide-num">06 · 14</span>
     <div class="slide-inner">
       <div class="kicker step"><i class="fa-solid fa-play"></i> Demo · 01 · Staff workspace</div>
       <h2 class="step">The <span class="accent-text">staff workspace</span>, end to end.</h2>
@@ -581,6 +904,7 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
       <div class="s67-stage">
         <div class="demo-screen step zoom">
           <video src="Staff_portal.mp4" controls preload="metadata" playsinline></video>
+          <button class="demo-expand" data-video="Staff_portal.mp4" aria-label="Expand video"><i class="fa-solid fa-expand"></i></button>
         </div>
         <div class="demo-bullets step cascade">
           <div class="db-h"><div class="di"><i class="fa-solid fa-file-import"></i></div><div><div class="dbt">GL → per-grant expense</div><div class="dbs">CSV imported, matched, tagged automatically.</div></div></div>
@@ -589,13 +913,13 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
         </div>
       </div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DEMO 01 · 05 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DEMO 01 · 06 / 14</span></div>
   </div>
 
   <!-- SLIDE 7 — DEMO 2 -->
-  <div class="slide slide-6" data-num="06">
+  <div class="slide slide-7" data-num="07">
     <div class="slide-bg"></div>
-    <span class="slide-num">06 · 10</span>
+    <span class="slide-num">07 · 14</span>
     <div class="slide-inner">
       <div class="kicker mint step"><i class="fa-solid fa-play"></i> Demo · 02 · Client portal</div>
       <h2 class="step">The <span class="accent-text">client portal</span> — what the client sees.</h2>
@@ -603,6 +927,7 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
       <div class="s67-stage">
         <div class="demo-screen step zoom">
           <video src="Client_portal.mp4" controls preload="metadata" playsinline></video>
+          <button class="demo-expand" data-video="Client_portal.mp4" aria-label="Expand video"><i class="fa-solid fa-expand"></i></button>
         </div>
         <div class="demo-bullets step cascade">
           <div class="db-h"><div class="di"><i class="fa-solid fa-folder-open"></i></div><div><div class="dbt">Document exchange</div><div class="dbs">Versioned uploads, structured request lists.</div></div></div>
@@ -611,13 +936,13 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
         </div>
       </div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DEMO 02 · 06 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DEMO 02 · 07 / 14</span></div>
   </div>
 
   <!-- SLIDE 8 — TRUST (fixed) -->
-  <div class="slide slide-7" data-num="07">
+  <div class="slide slide-8" data-num="08">
     <div class="slide-bg"></div>
-    <span class="slide-num">07 · 10</span>
+    <span class="slide-num">08 · 14</span>
     <div class="slide-inner">
       <div class="kicker butter step"><i class="fa-solid fa-shield-check"></i> Demo · 03 · Trust layer</div>
       <h2 class="step">Audit trail & <span class="accent-text">billing</span>, designed in.</h2>
@@ -633,13 +958,201 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
         <div class="trust"><div class="ti"><i class="fa-solid fa-key"></i></div><div class="tt">Role-based access</div><div class="ts">Each role sees what they should.</div></div>
       </div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>TRUST · 07 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>TRUST · 08 / 14</span></div>
   </div>
 
-  <!-- SLIDE 9 — WHY NOW -->
-  <div class="slide slide-8" data-num="08">
+  <!-- SLIDE 9 — DIFFERENTIATOR (firm-side vs NFP-side) -->
+  <div class="slide slide-diff" data-num="09">
     <div class="slide-bg"></div>
-    <span class="slide-num">08 · 10</span>
+    <span class="slide-num">09 · 14</span>
+    <div class="slide-inner">
+      <div class="s9d-head step">
+        <div class="kicker blush"><i class="fa-solid fa-arrows-left-right"></i> Why this is different</div>
+        <h2>Other tools serve one nonprofit. <span class="accent-text">GMS serves a firm.</span></h2>
+        <p class="lead">Their NFP plans help one nonprofit run its books. None of them give an accounting firm a multi-client, multi-grant, multi-billing-model workspace. Three quick scenarios.</p>
+      </div>
+      <div class="s9d-cases step cascade">
+        <div class="s9d-case">
+          <div class="s9d-case-head">
+            <span class="s9d-cn">01</span>
+            <div class="s9d-ct">Serving a book of 15 nonprofit clients across the firm</div>
+          </div>
+          <div class="s9d-cmp">
+            <div class="s9d-them">
+              <div class="s9d-lbl"><i class="fa-solid fa-xmark"></i> QuickBooks / Sage NFP</div>
+              <p>One subscription per nonprofit. Staff log into 15 separate client accounts, export each GL by hand, rebuild allocations in Excel — no cross-client view of the firm's NFP book.</p>
+            </div>
+            <div class="s9d-us">
+              <div class="s9d-lbl"><i class="fa-solid fa-check"></i> GMS</div>
+              <p>One firm workspace. All 15 clients onboarded once; every grant imported via a standard GL upload, allocated through the engine, visible side-by-side from day one.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s9d-case">
+          <div class="s9d-case-head">
+            <span class="s9d-cn">02</span>
+            <div class="s9d-ct">A manager wants a Monday-morning view across all 6 of their NFP clients</div>
+          </div>
+          <div class="s9d-cmp">
+            <div class="s9d-them">
+              <div class="s9d-lbl"><i class="fa-solid fa-xmark"></i> QuickBooks / Sage NFP</div>
+              <p>Six separate logins, six separate exports, and a spreadsheet stitched together by hand. By the time the view is ready, the week has moved on.</p>
+            </div>
+            <div class="s9d-us">
+              <div class="s9d-lbl"><i class="fa-solid fa-check"></i> GMS</div>
+              <p>One manager portal showing every assigned client side-by-side — budget vs. actual, pending reviews, overdue items — in a single screen, no exports.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s9d-case">
+          <div class="s9d-case-head">
+            <span class="s9d-cn">03</span>
+            <div class="s9d-ct">Onboarding a new staff member onto an NFP engagement</div>
+          </div>
+          <div class="s9d-cmp">
+            <div class="s9d-them">
+              <div class="s9d-lbl"><i class="fa-solid fa-xmark"></i> Karmasuite / NFP tools</div>
+              <p>Staff hunts down the prior senior's spreadsheets, asks where the documents live, and relearns each client's quirks. Ramp-up is days, sometimes weeks.</p>
+            </div>
+            <div class="s9d-us">
+              <div class="s9d-lbl"><i class="fa-solid fa-check"></i> GMS</div>
+              <p>Same workbook structure for every engagement. Prior overrides, document vault, and assignment history all visible on day one — ramp-up is hours.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s9d-case">
+          <div class="s9d-case-head">
+            <span class="s9d-cn">04</span>
+            <div class="s9d-ct">A non-specialist staff member runs the engagement</div>
+          </div>
+          <div class="s9d-cmp">
+            <div class="s9d-them">
+              <div class="s9d-lbl"><i class="fa-solid fa-xmark"></i> QuickBooks / Sage / Karmasuite</div>
+              <p>Each tool assumes the user already understands grant accounting, federal compliance, or the software's quirks. Training and senior oversight become the bottleneck.</p>
+            </div>
+            <div class="s9d-us">
+              <div class="s9d-lbl"><i class="fa-solid fa-check"></i> GMS</div>
+              <p>Built for staff, not specialists. Plain-language screens, guided workflows, and engine-driven allocations — no grant-accounting background or software training required.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s9d-foot step"><i class="fa-solid fa-circle-info"></i> Those tools sell to the <em>nonprofit</em>. GMS is the platform a <em>firm</em> uses to serve many nonprofits at once.</div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>DIFFERENTIATOR · 09 / 14</span></div>
+  </div>
+
+  <!-- SLIDE 10 — ROLE HIERARCHY & PORTALS -->
+  <div class="slide slide-hier" data-num="10">
+    <div class="slide-bg"></div>
+    <span class="slide-num">10 · 14</span>
+    <div class="slide-inner">
+      <div class="s10h-head step">
+        <div class="kicker sky"><i class="fa-solid fa-sitemap"></i> Roles &amp; portals</div>
+        <h2>Five roles. <span class="accent-text">Five portals</span>. Permissions designed in.</h2>
+        <p class="lead">Every role sees its own surface — built on Spatie permission with row-level security at the database. No role accidentally sees another's data.</p>
+      </div>
+      <div class="s10h-tiles step cascade">
+        <div class="s10h-tile j-lilac">
+          <div class="s10h-tbar"><span class="s10h-dots"><i></i><i></i><i></i></span><span class="s10h-turl">/operator</span></div>
+          <div class="s10h-tbody">
+            <div class="s10h-trole"><i class="fa-solid fa-shield-halved"></i><span>Operator</span></div>
+            <div class="s10h-tscope">Platform-wide</div>
+            <div class="s10h-tnav">
+              <span class="s10h-pill active">Firms</span>
+              <span class="s10h-pill">Audit</span>
+              <span class="s10h-pill">Backups</span>
+              <span class="s10h-pill">Flags</span>
+            </div>
+            <div class="s10h-tstack">
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Acme NFP Advisory <em>14 orgs</em></div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Citrin Sample Firm <em>9 orgs</em></div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>View-as-user · step-up 2FA</div>
+            </div>
+          </div>
+        </div>
+        <div class="s10h-tile j-sky">
+          <div class="s10h-tbar"><span class="s10h-dots"><i></i><i></i><i></i></span><span class="s10h-turl">/dashboard</span></div>
+          <div class="s10h-tbody">
+            <div class="s10h-trole"><i class="fa-solid fa-user-tie"></i><span>Superadmin</span></div>
+            <div class="s10h-tscope">Per firm</div>
+            <div class="s10h-tnav">
+              <span class="s10h-pill active">Users</span>
+              <span class="s10h-pill">Orgs</span>
+              <span class="s10h-pill">Audit log</span>
+            </div>
+            <div class="s10h-tstack">
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Manage firm users &amp; roles</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Onboard new client orgs</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Firm-wide audit visibility</div>
+            </div>
+          </div>
+        </div>
+        <div class="s10h-tile j-mint">
+          <div class="s10h-tbar"><span class="s10h-dots"><i></i><i></i><i></i></span><span class="s10h-turl">/firm/{org}/manager</span></div>
+          <div class="s10h-tbody">
+            <div class="s10h-trole"><i class="fa-solid fa-user-gear"></i><span>Manager</span></div>
+            <div class="s10h-tscope">Assigned orgs</div>
+            <div class="s10h-tnav">
+              <span class="s10h-pill active">Reviews</span>
+              <span class="s10h-pill">Staff</span>
+              <span class="s10h-pill">Grants</span>
+            </div>
+            <div class="s10h-tstack">
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Cross-org expense review</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Assign staff to engagements</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Approve allocation workflows</div>
+            </div>
+          </div>
+        </div>
+        <div class="s10h-tile j-peach">
+          <div class="s10h-tbar"><span class="s10h-dots"><i></i><i></i><i></i></span><span class="s10h-turl">/dashboard</span></div>
+          <div class="s10h-tbody">
+            <div class="s10h-trole"><i class="fa-solid fa-user-pen"></i><span>Staff</span></div>
+            <div class="s10h-tscope">Assigned orgs</div>
+            <div class="s10h-tnav">
+              <span class="s10h-pill active">Workbook</span>
+              <span class="s10h-pill">Imports</span>
+              <span class="s10h-pill">Docs</span>
+            </div>
+            <div class="s10h-tstack">
+              <div class="s10h-tline"><span class="s10h-tdot"></span>GL imports &amp; allocations</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Cell-level overrides</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Reimbursement claim prep</div>
+            </div>
+          </div>
+        </div>
+        <div class="s10h-tile j-blush">
+          <div class="s10h-tbar"><span class="s10h-dots"><i></i><i></i><i></i></span><span class="s10h-turl">/portal</span></div>
+          <div class="s10h-tbody">
+            <div class="s10h-trole"><i class="fa-solid fa-user"></i><span>Client</span></div>
+            <div class="s10h-tscope">Own org only</div>
+            <div class="s10h-tnav">
+              <span class="s10h-pill active">Reports</span>
+              <span class="s10h-pill">Pipeline</span>
+              <span class="s10h-pill">Docs</span>
+            </div>
+            <div class="s10h-tstack">
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Grant status &amp; balances</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Funder &amp; compliance views</div>
+              <div class="s10h-tline"><span class="s10h-tdot"></span>Opt-in: submit expense &middot; upload doc</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s10h-foot step">
+        <div class="s10h-fcard"><i class="fa-solid fa-lock"></i><div><div class="s10h-ft">Forced row-level security</div><div class="s10h-fs">Database refuses cross-tenant queries — not a code-only rule.</div></div></div>
+        <div class="s10h-fcard"><i class="fa-solid fa-fingerprint"></i><div><div class="s10h-ft">Append-only audit log</div><div class="s10h-fs">Every privileged action recorded with user, timestamp, and reason.</div></div></div>
+        <div class="s10h-fcard"><i class="fa-solid fa-key"></i><div><div class="s10h-ft">No automatic escalation</div><div class="s10h-fs">Manager doesn't inherit Staff. Every role grant is explicit.</div></div></div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>ROLES · 10 / 14</span></div>
+  </div>
+
+  <!-- SLIDE 11 — WHY NOW -->
+  <div class="slide slide-9" data-num="11">
+    <div class="slide-bg"></div>
+    <span class="slide-num">11 · 14</span>
     <div class="slide-inner">
       <div class="kicker step"><i class="fa-solid fa-arrow-trend-up"></i> Why now</div>
       <h2 class="step">Why now — and why this <span class="accent-text">matters beyond grants</span>.</h2>
@@ -669,13 +1182,13 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
         <div class="mtag">PHASE 3</div>
       </div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>WHY NOW · 08 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>WHY NOW · 11 / 14</span></div>
   </div>
 
-  <!-- SLIDE 10 — ECONOMIC BENEFITS (new) -->
-  <div class="slide slide-9" data-num="09">
+  <!-- SLIDE 10 — ECONOMIC BENEFITS -->
+  <div class="slide slide-10" data-num="12">
     <div class="slide-bg"></div>
-    <span class="slide-num">09 · 10</span>
+    <span class="slide-num">12 · 14</span>
     <div class="slide-inner">
       <div class="kicker mint step"><i class="fa-solid fa-coins"></i> Economic benefits</div>
       <h2 class="step">40% time saved <span class="accent-text">≈ 3 FTEs back</span>.</h2>
@@ -708,20 +1221,94 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
       </div>
       <div class="eco-foot step"><strong>Method:</strong> 40% time-loss estimate × current NFP-engagement hours ÷ FTE annual hours. Conservative — assumes no growth in NFP book.</div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>ECONOMICS · 09 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>ECONOMICS · 12 / 14</span></div>
   </div>
 
-  <!-- SLIDE 11 — CLOSING -->
-  <div class="slide slide-10 slide-closing" data-num="10">
+  <!-- SLIDE 11 — TECH STACK -->
+  <div class="slide slide-11t" data-num="13">
     <div class="slide-bg"></div>
-    <span class="slide-num">10 · 10</span>
+    <span class="slide-num">13 · 14</span>
+    <div class="slide-inner">
+      <div class="s11-head step">
+        <div class="kicker"><i class="fa-solid fa-microchip"></i> Tech stack &amp; maintenance</div>
+        <h2>Built on a <span class="accent-text">modern, mainstream</span> stack.</h2>
+        <p class="lead">Laravel + PostgreSQL — the same foundation as Disney+, the New York Times, and tens of thousands of production SaaS platforms.</p>
+      </div>
+      <div class="s11-pillars-label step"><span class="s11-pl-tag"><i class="fa-solid fa-grip"></i> Six pillars</span></div>
+      <div class="s11-grid step cascade">
+        <div class="s11-card s11-be">
+          <div class="s11-ch"><div class="s11-ic"><i class="fa-brands fa-laravel"></i></div><div class="s11-ct">Backend</div></div>
+          <div class="s11-body">
+            <p>Laravel 11 · PHP 8.2+ · Eloquent ORM</p>
+            <p class="s11-sub">Quality gate: PHPStan Level 9 + Pest test suite + Laravel Pint</p>
+          </div>
+        </div>
+        <div class="s11-card s11-fe">
+          <div class="s11-ch"><div class="s11-ic"><i class="fa-solid fa-palette"></i></div><div class="s11-ct">Frontend</div></div>
+          <div class="s11-body">
+            <p>Livewire 3 + Blade · Tailwind CSS · Vite</p>
+            <p class="s11-sub">Server-rendered — no SPA, no JavaScript framework sprawl</p>
+          </div>
+        </div>
+        <div class="s11-card s11-db">
+          <div class="s11-ch"><div class="s11-ic"><i class="fa-solid fa-database"></i></div><div class="s11-ct">Database</div></div>
+          <div class="s11-body">
+            <p>PostgreSQL 17 · Row-Level Security (forced)</p>
+            <p class="s11-sub">Redis for cache + queue</p>
+          </div>
+        </div>
+        <div class="s11-card s11-lib">
+          <div class="s11-ch"><div class="s11-ic"><i class="fa-solid fa-cubes"></i></div><div class="s11-ct">Key packages</div></div>
+          <div class="s11-body">
+            <p>Fortify + Sanctum <em>(auth)</em> · spatie/permission <em>(RBAC)</em></p>
+            <p class="s11-sub">spatie/activitylog + medialibrary · Laravel Horizon + Backup</p>
+          </div>
+        </div>
+        <div class="s11-card s11-host">
+          <div class="s11-ch"><div class="s11-ic"><i class="fa-solid fa-cloud"></i></div><div class="s11-ct">Hosting target</div></div>
+          <div class="s11-body">
+            <p>Azure / Hetzner / Laravel Cloud · full-control Linux</p>
+            <p class="s11-sub">Redis queue managed by Horizon</p>
+          </div>
+        </div>
+        <div class="s11-card s11-sec">
+          <div class="s11-ch"><div class="s11-ic"><i class="fa-solid fa-shield-halved"></i></div><div class="s11-ct">Security &amp; ops</div></div>
+          <div class="s11-body">
+            <p>Bcrypt (cost 12) + TOTP step-up · forced RLS at the database layer</p>
+            <p class="s11-sub">Append-only audit log · daily verified backups</p>
+          </div>
+        </div>
+      </div>
+      <div class="s11-foot step">
+        <div class="s11-foot-glance">
+          <div class="s11-foot-label"><i class="fa-solid fa-eye"></i> At a glance</div>
+          <div class="s11-foot-stats">
+            <span>Laravel 11</span><span class="s11-dot">·</span>
+            <span>PHP 8.2+</span><span class="s11-dot">·</span>
+            <span>PostgreSQL 17</span><span class="s11-dot">·</span>
+            <span>~110 tables</span>
+          </div>
+        </div>
+        <div class="s11-foot-maint">
+          <div class="s11-foot-label"><i class="fa-solid fa-wrench"></i> Maintenance footprint</div>
+          <p>Linux host with PHP 8.2+, PostgreSQL 17, Redis, Node 20 (build only), Composer. Standard Laravel operations — no proprietary services, no vendor lock-in.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>TECH STACK · 13 / 14</span></div>
+  </div>
+
+  <!-- SLIDE 12 — CLOSING -->
+  <div class="slide slide-12 slide-closing" data-num="14">
+    <div class="slide-bg"></div>
+    <span class="slide-num">14 · 14</span>
     <div class="slide-inner">
       <div class="kicker step"><i class="fa-solid fa-flag-checkered"></i> The ask</div>
       <h2 class="step">The tool already exists.<br><span class="accent-text">The only question</span> is whether Citrin uses it —<br>or watches the market catch up.</h2>
       <div class="closing-punch step"><i class="fa-solid fa-arrow-right"></i> Adopt GMS firm-wide for grant engagements.</div>
       <div style="text-align:center"><div class="closing-logo step"><div class="sq"><i class="fa-solid fa-shield-halved"></i></div><span>CITRIN COOPERMAN · GMS · 2026</span></div></div>
     </div>
-    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>THE ASK · 10 / 10</span></div>
+    <div class="slide-foot"><div class="brand-mini"><div class="logo"><i class="fa-solid fa-shield-halved"></i></div>GMS · Grant Management System</div><span>THE ASK · 14 / 14</span></div>
   </div>
 
 </div>
@@ -730,17 +1317,20 @@ p.lead{font-size:1.1rem;color:var(--ink-2);max-width:820px}
 
 <div class="controls">
   <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
-  <span class="counter" id="counter">01 / 10</span>
+  <span class="counter" id="counter">01 / 14</span>
   <span class="step-counter" id="stepCounter">·</span>
   <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
 </div>
-
-<div class="hint"><kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd></div>
 
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<div class="video-overlay" id="videoOverlay">
+  <button class="video-overlay-close" id="videoOverlayClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <video id="videoOverlayPlayer" controls playsinline></video>
 </div>
 
 <script>
@@ -834,7 +1424,30 @@ document.querySelectorAll('.shotbox[data-zoom]').forEach(box=>{
 lightboxClose.addEventListener('click',closeLightbox);
 lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)closeLightbox()});
 
+const videoOverlay=document.getElementById('videoOverlay');
+const videoOverlayPlayer=document.getElementById('videoOverlayPlayer');
+const videoOverlayClose=document.getElementById('videoOverlayClose');
+function openVideoOverlay(src){
+  videoOverlayPlayer.src=src;
+  videoOverlay.classList.add('open');
+  videoOverlayPlayer.play().catch(()=>{});
+}
+function closeVideoOverlay(){
+  videoOverlayPlayer.pause();
+  videoOverlay.classList.remove('open');
+  setTimeout(()=>{videoOverlayPlayer.removeAttribute('src');videoOverlayPlayer.load()},300);
+}
+document.querySelectorAll('.demo-expand').forEach(btn=>{
+  btn.addEventListener('click',(e)=>{e.stopPropagation();openVideoOverlay(btn.dataset.video)});
+});
+videoOverlayClose.addEventListener('click',closeVideoOverlay);
+videoOverlay.addEventListener('click',(e)=>{if(e.target===videoOverlay)closeVideoOverlay()});
+
 document.addEventListener('keydown',(e)=>{
+  if(videoOverlay.classList.contains('open')){
+    if(e.key==='Escape'){e.preventDefault();closeVideoOverlay()}
+    return;
+  }
   if(lightbox.classList.contains('open')){
     if(e.key==='Escape'){e.preventDefault();closeLightbox()}
     return;
